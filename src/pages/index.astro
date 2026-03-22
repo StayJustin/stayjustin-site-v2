@@ -1,12 +1,46 @@
----
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Pillars from '../components/Pillars.astro';
----
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StayJustin | West Covina Updates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 { font-size: 28px; }
+    p { font-size: 16px; margin: 10px 0; }
+    .btn {
+      display: block;
+      margin: 15px auto;
+      padding: 14px;
+      max-width: 300px;
+      background: #0a66c2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
 
-<Layout title="StayJustin | West Covina Tech Support & Local News">
-	<main>
-		<Hero />
-		<Pillars />
-	</main>
-</Layout>
+<body>
+
+<h1>StayJustin</h1>
+
+<p>West Covina tech help + local updates</p>
+
+<a class="btn" href="mailto:Justin@StayJustin.com">✉️ Email Justin for Help</a>
+
+<a class="btn" href="https://stayjustin.substack.com">📰 Read Latest Updates</a>
+
+<p style="margin-top:30px;">
+Full site is being updated.<br>
+Daily updates continue on Substack.
+</p>
+
+</body>
+</html>
