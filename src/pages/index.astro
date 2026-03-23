@@ -1,46 +1,739 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StayJustin | West Covina Updates</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    h1 { font-size: 28px; }
-    p { font-size: 16px; margin: 10px 0; }
-    .btn {
-      display: block;
-      margin: 15px auto;
-      padding: 14px;
-      max-width: 300px;
-      background: #0a66c2;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+    :root {
+      --navy: #123b64;
+      --blue: #1f74b7;
+      --sky: #dff1fb;
+      --gold: #f0b544;
+      --orange: #e38b2f;
+      --green: #2f8f69;
+      --green-dark: #217457;
+      --text: #17212b;
+      --muted: #5d6b78;
+      --card: #ffffff;
+      --bg: #f5f8fb;
+      --border: #d9e3ec;
+      --shadow: 0 10px 30px rgba(18, 59, 100, 0.10);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1180px;
+    }* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #eef6fb 0%, #f7fafc 220px, var(--bg) 100%);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 28, 48, 0.88);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-title {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-sub {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue), #0d90df);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.btn-green {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+}
+
+.hero-wrap {
+  padding: 28px 0 18px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-media {
+  position: relative;
+  min-height: 430px;
+  background: #dbe7f0;
+}
+
+.hero-media img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8,20,35,0.08) 0%, rgba(8,20,35,0.00) 55%, rgba(255,255,255,0.30) 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  padding: 48px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  background:
+    radial-gradient(circle at top right, rgba(240,181,68,0.18), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(31,116,183,0.12), transparent 36%),
+    #fff;
+}
+
+.eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--navy);
+  background: rgba(31,116,183,0.10);
+  border: 1px solid rgba(31,116,183,0.18);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.accent { color: var(--blue); }
+
+.hero-copy {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.hero-note {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.section {
+  padding: 14px 0 8px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 10px 0 18px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
+
+.section-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.snapshot-card {
+  background: linear-gradient(180deg, var(--navy), #235d8e);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.snapshot-card.green { background: linear-gradient(180deg, #1f8b70, #20795f); }
+.snapshot-card.gold { background: linear-gradient(180deg, #d79a2d, #bb7f18); }
+.snapshot-card.light { background: linear-gradient(180deg, #2e83c5, #255f99); }
+
+.snapshot-label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+.snapshot-title {
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 12px 0 8px;
+}
+
+.snapshot-copy {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.96rem;
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #d8e6f1;
+}
+
+.card-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.03);
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.card-tag {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.card-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.card-link {
+  margin-top: auto;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.feature {
+  margin-top: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(232,245,255,0.92));
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.feature-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  letter-spacing: -0.03em;
+}
+
+.feature-copy p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.service {
+  background: rgba(31,116,183,0.06);
+  border: 1px solid rgba(31,116,183,0.12);
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.feature-image {
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 360px;
+  background: #dceaf4;
+}
+
+.feature-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.subscribe {
+  margin: 24px 0 40px;
+  background: linear-gradient(135deg, #0d355a, #1564a4);
+  color: #fff;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.4fr auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.subscribe h3 {
+  margin: 0 0 6px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: -0.03em;
+}
+
+.subscribe p {
+  margin: 0;
+  color: rgba(255,255,255,0.88);
+  font-size: 1.04rem;
+}
+
+.footer {
+  padding: 10px 0 34px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+@media (max-width: 1080px) {
+  .hero,
+  .feature,
+  .subscribe,
+  .updates-grid,
+  .snapshot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .updates-grid .card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .hero,
+  .feature,
+  .subscribe,
+  .updates-grid,
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    min-height: 280px;
+  }
+
+  .hero-content,
+  .feature {
+    padding: 22px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subscribe {
+    padding: 22px;
+  }
+
+  .subscribe .btn {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(var(--max), calc(100% - 20px));
+  }
+
+  .brand-title {
+    font-size: 1.55rem;
+  }
+
+  .brand-sub {
+    font-size: 0.88rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .snapshot-title {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
-
 <body>
+  <!--
+    IMAGE SETUP
+    Replace these file paths with your uploaded image paths in your project.Suggested file names:
+/images/wc-mural.jpg
+/images/wc-cityhall.jpg
+/images/wc-sign.jpg
+/images/wc-night.jpg
+/images/wc-downtown.jpg
 
-<h1>StayJustin</h1>
+-->
 
-<p>West Covina tech help + local updates</p>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-title">StayJustin</div>
+        <div class="brand-sub">West Covina news • community updates • local tech help</div>
+      </div><nav class="nav-links">
+    <a href="#updates">News</a>
+    <a href="#snapshot">West Covina</a>
+    <a href="#tech-help">Tech Help</a>
+    <a class="btn btn-primary" href="https://stayjustin.substack.com" target="_blank" rel="noopener noreferrer">Subscribe</a>
+  </nav>
+</div>
 
-<a class="btn" href="mailto:Justin@StayJustin.com">✉️ Email Justin for Help</a>
+  </header>  <main>
+    <section class="hero-wrap">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-media">
+            <img src="/images/wc-mural.jpg" alt="West Covina mural artwork" />
+          </div><div class="hero-content">
+        <span class="eyebrow">For neighbors who want the real story</span>
+        <h1>What’s Going On in <span class="accent">West Covina</span></h1>
+        <p class="hero-copy">Local updates, city meeting takeaways, development news, and everyday community information written the way a neighbor would explain it — clearly, honestly, and without all the extra noise.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://stayjustin.substack.com" target="_blank" rel="noopener noreferrer">Subscribe</a>
+          <a class="btn btn-secondary" href="#updates">Read Latest Updates</a>
+        </div>
+        <p class="hero-note">This city matters. The people here matter. And if we stop paying attention and stop showing up for each other, we’re going to lose something special.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<a class="btn" href="https://stayjustin.substack.com">📰 Read Latest Updates</a>
+<section class="section" id="snapshot">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">What’s Happening This Week</h2>
+        <p class="section-sub">A quick look at the city meetings, community items, and local updates that stand out right now.</p>
+      </div>
+    </div>
 
-<p style="margin-top:30px;">
-Full site is being updated.<br>
-Daily updates continue on Substack.
-</p>
+    <div class="snapshot-grid">
+      <article class="snapshot-card light">
+        <div>
+          <div class="snapshot-label">Tuesday, March 24</div>
+          <div class="snapshot-title">Planning Commission Meeting</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> This is where development decisions begin. What gets discussed here can shape housing, business activity, and how parts of the city grow over time.</p>
+      </article>
 
+      <article class="snapshot-card green">
+        <div>
+          <div class="snapshot-label">Wednesday, March 25</div>
+          <div class="snapshot-title">Community &amp; Senior Center Commission</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> These meetings affect programs and services that many residents, seniors, and families depend on.</p>
+      </article>
+
+      <article class="snapshot-card gold">
+        <div>
+          <div class="snapshot-label">Community Event</div>
+          <div class="snapshot-title">Couples Connect Workshop</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> Events like this help keep the city feeling like a real community, not just a place where people happen to live.</p>
+      </article>
+
+      <article class="snapshot-card">
+        <div>
+          <div class="snapshot-label">Local Business</div>
+          <div class="snapshot-title">Mayor’s Restaurant &amp; Business Recognition</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> Local businesses give the city its character. When they are supported, the whole community benefits.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="updates">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Latest Updates</h2>
+        <p class="section-sub">Recent stories, local issues, and city updates that deserve a closer look.</p>
+      </div>
+    </div>
+
+    <div class="updates-grid">
+      <article class="card">
+        <div class="card-image">
+          <img src="/images/wc-cityhall.jpg" alt="West Covina City Hall" />
+        </div>
+        <div class="card-body">
+          <div class="card-tag">City Hall</div>
+          <h3 class="card-title">Planning Commission Canceled Tonight</h3>
+          <p class="card-text">Sometimes the most useful update is the plain one: what changed, what got canceled, and what people need to know right now.</p>
+          <a class="card-link" href="#">Read More →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="/images/wc-sign.jpg" alt="West Covina sign at city hall" />
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Watch List</div>
+          <h3 class="card-title">3 Meetings to Watch This Month</h3>
+          <p class="card-text">A clean roundup for the meetings, votes, and decisions worth watching before they quietly pass by.</p>
+          <a class="card-link" href="#">Read More →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="/images/wc-downtown.jpg" alt="Downtown West Covina view" />
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Development</div>
+          <h3 class="card-title">What’s Changing Around Downtown</h3>
+          <p class="card-text">Use this space to track what’s changing in the city, what’s being built, and what kind of future we’re heading toward.</p>
+          <a class="card-link" href="#">Read More →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tech-help">
+  <div class="container">
+    <div class="feature">
+      <div class="feature-copy">
+        <h2>Local <span class="accent">Tech Help</span></h2>
+        <p>When something at home stops working, most people do not need a lecture — they need help. This section is for neighbors who want honest, local tech support without the runaround.</p>
+
+        <div class="service-grid">
+          <div class="service">Wi-Fi & Internet</div>
+          <div class="service">Security Cameras</div>
+          <div class="service">Printers & Devices</div>
+          <div class="service">Digital Privacy</div>
+        </div>
+
+        <a class="btn btn-green" href="mailto:Justin@StayJustin.com?subject=Need%20Tech%20Help">Tell Me What’s Broken</a>
+      </div>
+
+      <div class="feature-image">
+        <img src="/images/wc-night.jpg" alt="West Covina at night" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subscribe">
+      <div>
+        <h3>Subscribe to Just-In Press</h3>
+        <p>For the deeper breakdowns, the meeting takeaways, and the context that usually gets lost, subscribe here and stay connected to what’s really happening in West Covina.</p>
+      </div>
+      <a class="btn btn-secondary" href="https://stayjustin.substack.com" target="_blank" rel="noopener noreferrer">Subscribe</a>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 StayJustin</div>
+      <div>West Covina updates • Community information • Local tech help</div>
+    </div>
+  </footer>
 </body>
 </html>
