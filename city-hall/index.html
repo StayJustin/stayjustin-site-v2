@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Covina City Hall Updates, Council Meetings & Agenda Summaries | StayJustin</title>
+  <meta name="description" content="Simple West Covina City Hall coverage with city council summaries, agenda breakdowns, planning commission updates, and local government decisions explained clearly." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.stayjustin.com/city-hall/" />
+
+  <meta property="og:title" content="West Covina City Hall Updates | StayJustin" />
+  <meta property="og:description" content="City council summaries, planning commission updates, agendas, and local government decisions explained in plain English." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.stayjustin.com/city-hall/" />
+  <meta property="og:image" content="https://www.stayjustin.com/images/wc-cityhall.jpg" />
+
+  <style>
+    :root {
+      --navy: #123b64;
+      --blue: #1f74b7;
+      --sky: #dff1fb;
+      --gold: #f0b544;
+      --green: #2f8f69;
+      --green-dark: #217457;
+      --text: #17212b;
+      --muted: #5d6b78;
+      --card: #ffffff;
+      --bg: #f5f8fb;
+      --border: #d9e3ec;
+      --shadow: 0 10px 30px rgba(18, 59, 100, 0.10);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef6fb 0%, #f7fafc 220px, var(--bg) 100%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: auto; }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(10, 28, 48, 0.88);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav {
+      min-height: 76px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .brand-title {
+      color: #fff; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em;
+    }
+    .brand-sub {
+      color: rgba(255,255,255,0.8); font-size: 0.95rem; font-weight: 500;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      padding: 12px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.08); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 12px 20px; border-radius: 999px;
+      font-weight: 800;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), #0d90df);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .btn-secondary {
+      background: #fff;
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .hero-wrap { padding: 28px 0 18px; }
+    .hero {
+      display: grid; grid-template-columns: 1.05fr 1fr;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .hero-media { min-height: 380px; background: #dbe7f0; }
+    .hero-media img { height: 100%; object-fit: cover; }
+    .hero-content {
+      padding: 42px;
+      display: flex; flex-direction: column; justify-content: center; gap: 16px;
+      background:
+        radial-gradient(circle at top right, rgba(240,181,68,0.18), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(31,116,183,0.12), transparent 36%),
+        #fff;
+    }
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--navy);
+      background: rgba(31,116,183,0.10);
+      border: 1px solid rgba(31,116,183,0.18);
+    }
+    h1, h2, h3 { letter-spacing: -0.03em; }
+    h1 { margin: 0; font-size: clamp(2.3rem, 4vw, 3.8rem); line-height: 1.05; }
+    h2 { margin: 0 0 8px; font-size: clamp(1.7rem, 3vw, 2.3rem); }
+    .accent { color: var(--blue); }
+    .hero-copy, .lead, .faq-answer, .card-text, .section-sub, p { color: var(--muted); }
+
+    .section { padding: 14px 0 8px; }
+    .section-header { margin: 10px 0 18px; }
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column;
+    }
+    .card-image { aspect-ratio: 16 / 10; background: #d8e6f1; }
+    .card-image img { height: 100%; object-fit: cover; }
+    .card-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; height: 100%; }
+    .card-tag {
+      color: var(--blue); font-weight: 800; font-size: 0.82rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .card-title { margin: 0; font-size: 1.45rem; line-height: 1.18; }
+    .card-link { margin-top: auto; color: var(--blue); font-weight: 800; }
+
+    .content-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .related-links {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    }
+    .related-links a {
+      background: rgba(31,116,183,0.06);
+      border: 1px solid rgba(31,116,183,0.12);
+      border-radius: 16px;
+      padding: 16px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .faq-list {
+      display: grid; gap: 14px;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .faq-question {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+    .subscribe {
+      margin: 24px 0 40px;
+      background: linear-gradient(135deg, #0d355a, #1564a4);
+      color: #fff;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.4fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+    .subscribe p { color: rgba(255,255,255,0.88); }
+
+    .footer {
+      padding: 10px 0 34px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 24px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+    .footer-title {
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    @media (max-width: 980px) {
+      .hero, .grid-3, .related-links, .subscribe, .footer-inner { grid-template-columns: 1fr 1fr; }
+      .grid-3 .card:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .hero, .grid-3, .related-links, .subscribe, .footer-inner { grid-template-columns: 1fr; }
+      .hero-content, .content-box { padding: 22px; }
+      .btn { width: 100%; }
+      .nav-links { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div>
+        <div class="brand-title">StayJustin</div>
+        <div class="brand-sub">West Covina news • city hall • new businesses • local events</div>
+      </div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/west-covina-news/">News</a>
+        <a href="/city-hall/">City Hall</a>
+        <a href="/new-businesses/">New Businesses</a>
+        <a href="/development/">Development</a>
+        <a href="/events/">Events</a>
+        <a href="/traffic-road-closures/">Traffic</a>
+        <a class="btn btn-primary" href="https://stayjustin.substack.com" target="_blank" rel="noopener noreferrer">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-wrap">
+      <div class="container">
+        <section class="hero">
+          <div class="hero-media">
+            <img src="/images/wc-cityhall.jpg" alt="West Covina City Hall building" />
+          </div>
+          <div class="hero-content">
+            <span class="eyebrow">StayJustin • City Hall</span>
+            <h1>West Covina <span class="accent">City Hall</span> Updates</h1>
+            <p class="hero-copy">
+              City council summaries, agenda breakdowns, planning commission updates, and local government decisions explained clearly for busy West Covina residents.
+            </p>
+            <div>
+              <a class="btn btn-secondary" href="/newsletter/">Browse Newsletter Archive</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-box">
+          <h2>What this page covers</h2>
+          <p class="lead">
+            City Hall decisions shape more of everyday life in West Covina than most people realize. Parking rules, development approvals, spending decisions, zoning changes, public safety discussions, and neighborhood planning often start in city council or commission meetings. The problem is that most residents do not have time to sit through long meetings or decode government language.
+          </p>
+          <p class="lead">
+            This page is built to make West Covina City Hall easier to follow. StayJustin breaks down city council meetings, planning commission agendas, public hearings, and important votes in plain language. You will find summaries of what happened, what it means, who it affects, and what to watch next.
+          </p>
+          <p class="lead">
+            Whether you are trying to keep up with a major vote, understand a new proposal, or simply stay informed about how West Covina is being run, this page is your shortcut to the most important City Hall updates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured City Hall Updates</h2>
+          <p class="section-sub">Use these as your first internal article links.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-image"><img src="/images/wc-cityhall.jpg" alt="West Covina council chamber area" /></div>
+            <div class="card-body">
+              <div class="card-tag">City Council</div>
+              <h3 class="card-title">West Covina City Council Summary</h3>
+              <p class="card-text">A clean recap of major decisions, discussion points, and what they mean for residents.</p>
+              <a class="card-link" href="/city-hall/west-covina-city-council-summary/">Read More →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/images/wc-sign.jpg" alt="West Covina civic sign" /></div>
+            <div class="card-body">
+              <div class="card-tag">Planning Commission</div>
+              <h3 class="card-title">Planning Commission Coverage</h3>
+              <p class="card-text">Track development conversations before they turn into visible changes around the city.</p>
+              <a class="card-link" href="/city-hall/west-covina-planning-commission/">Read More →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image"><img src="/images/wc-downtown.jpg" alt="Downtown view in West Covina" /></div>
+            <div class="card-body">
+              <div class="card-tag">Watch List</div>
+              <h3 class="card-title">Meetings and Votes to Watch</h3>
+              <p class="card-text">A simple guide to the meetings, agenda items, and decisions worth paying attention to next.</p>
+              <a class="card-link" href="/city-hall/west-covina-meetings-to-watch/">Read More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-box">
+          <h2>Related West Covina Coverage</h2>
+          <div class="related-links">
+            <a href="/development/">Zoning and development updates</a>
+            <a href="/traffic-road-closures/">Road and parking changes in West Covina</a>
+            <a href="/west-covina-news/">Neighborhood news and local issues</a>
+            <a href="/events/">Public meetings and local events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-question">What will I find on the City Hall page?</h3>
+            <p class="faq-answer">You will find summaries of city council meetings, agenda highlights, planning commission discussions, votes, ordinances, and public policy updates affecting West Covina.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Do you explain city issues in simple terms?</h3>
+            <p class="faq-answer">Yes. The goal is to translate City Hall into clear, useful information for busy people.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <section class="subscribe">
+          <div>
+            <h2>Get West Covina updates in 3 minutes</h2>
+            <p>Subscribe for simple explanations of city meetings, business openings, development decisions, and neighborhood changes.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://stayjustin.substack.com" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">StayJustin</div>
+        <div>West Covina news, city hall summaries, business openings, development updates, events, and daily-life changes explained simply.</div>
+      </div>
+      <div>
+        <div class="footer-title">Top Pages</div>
+        <div class="footer-links">
+          <a href="/west-covina-news/">West Covina News</a>
+          <a href="/new-businesses/">New Businesses</a>
+          <a href="/development/">Development</a>
+          <a href="/traffic-road-closures/">Traffic & Road Closures</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Resources</div>
+        <div class="footer-links">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/newsletter/">Newsletter Archive</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
