@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import HubIconGrid from "../components/HubIconGrid.astro";
 ---
 
 <MainLayout
@@ -7,26 +8,15 @@ import MainLayout from "../layouts/MainLayout.astro";
   description="Stay updated with West Covina news, city hall decisions, new businesses, development projects, traffic updates, and local events."
   canonical="https://www.stayjustin.com/"
 >
+  <section class="hero">
+    <div class="container">
+      <h1>What’s Going On in West Covina</h1>
+      <p>
+        Simple updates on city hall, new businesses, development,
+        traffic changes, and local events — explained clearly.
+      </p>
+    </div>
+  </section>
 
-<section class="hero">
-  <h1>What’s Going On in West Covina</h1>
-  <p>
-    Simple updates on city hall, new businesses, development,
-    traffic changes, and local events — explained clearly.
-  </p>
-</section>
-
-<section class="hub-links">
-  <h2>Explore West Covina</h2>
-
-  <ul>
-    <li><a href="/west-covina-news/">West Covina News</a></li>
-    <li><a href="/city-hall/">City Hall Updates</a></li>
-    <li><a href="/new-businesses/">New Businesses</a></li>
-    <li><a href="/development/">Development Projects</a></li>
-    <li><a href="/traffic-road-closures/">Traffic & Road Closures</a></li>
-    <li><a href="/events/">Local Events</a></li>
-  </ul>
-</section>
-
+  <HubIconGrid />
 </MainLayout>
