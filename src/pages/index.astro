@@ -1,13 +1,10 @@
----
-import MainLayout from "../layouts/MainLayout.astro";
----
-
-<MainLayout
-  title="West Covina News, City Updates & Local Events | StayJustin"
-  description="Stay updated with West Covina news, city hall decisions, new businesses, development projects, traffic updates, and local events."
-  canonical="https://www.stayjustin.com/"
->
-  <style is:global>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StayJustin | West Covina Updates</title>
+  <style>
     :root {
       --navy: #123b64;
       --blue: #1f74b7;
@@ -23,10 +20,12 @@ import MainLayout from "../layouts/MainLayout.astro";
       --border: #d9e3ec;
       --shadow: 0 10px 30px rgba(18, 59, 100, 0.10);
       --radius: 18px;
+      --radius-sm: 12px;
       --max: 1180px;
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -225,7 +224,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     .hero-note {
       color: var(--muted);
       font-size: 0.96rem;
-      margin: 0;
     }
 
     .section {
@@ -557,6 +555,19 @@ import MainLayout from "../layouts/MainLayout.astro";
       }
     }
   </style>
+</head>
+<body>
+  <!--
+    IMAGE SETUP
+    Replace these file paths with your uploaded image paths in your project.
+
+    Suggested file names:
+    /images/wc-mural.jpg
+    /images/wc-cityhall.jpg
+    /images/wc-sign.jpg
+    /images/wc-night.jpg
+    /images/wc-downtown.jpg
+  -->
 
   <header class="topbar">
     <div class="container nav">
@@ -586,70 +597,67 @@ import MainLayout from "../layouts/MainLayout.astro";
             <span class="eyebrow">For neighbors who want the real story</span>
             <h1>What’s Going On in <span class="accent">West Covina</span></h1>
             <p class="hero-copy">Local updates, city meeting takeaways, development news, and everyday community information written the way a neighbor would explain it — clearly, honestly, and without all the extra noise.</p>
-
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://stayjustin.substack.com" target="_blank" rel="noopener noreferrer">Subscribe</a>
               <a class="btn btn-secondary" href="#updates">Read Latest Updates</a>
             </div>
-
-            <p class="hero-note">This city matters. The people here matter. And if we stop paying attention and stop showing up for each other, we’re going to lose something special.</p>
-            <p class="hero-note">I live here too. I care about what happens here, and I know a lot of good people do too.</p>
+            <p class="hero-note">Last updated: March 29, 2026</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="snapshot">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">What’s Happening This Week</h2>
-            <p class="section-sub">A quick look at the city meetings, community items, and local updates that stand out right now.</p>
-          </div>
-        </div>
-
-        <div class="snapshot-grid">
-          <article class="snapshot-card light">
-            <div>
-              <div class="snapshot-label">Tuesday, March 24</div>
-              <div class="snapshot-title">Planning Commission Meeting</div>
-            </div>
-            <p class="snapshot-copy"><strong>Why it matters:</strong> This is where development decisions begin. What gets discussed here can shape housing, business activity, and how parts of the city grow over time.</p>
-          </article>
-
-          <article class="snapshot-card green">
-            <div>
-              <div class="snapshot-label">Wednesday, March 25</div>
-              <div class="snapshot-title">Community &amp; Senior Center Commission</div>
-            </div>
-            <p class="snapshot-copy"><strong>Why it matters:</strong> These meetings affect programs and services that many residents, seniors, and families depend on.</p>
-          </article>
-
-          <article class="snapshot-card gold">
-            <div>
-              <div class="snapshot-label">Community Event</div>
-              <div class="snapshot-title">Couples Connect Workshop</div>
-            </div>
-            <p class="snapshot-copy"><strong>Why it matters:</strong> Events like this help keep the city feeling like a real community, not just a place where people happen to live.</p>
-          </article>
-
-          <article class="snapshot-card">
-            <div>
-              <div class="snapshot-label">Local Business</div>
-              <div class="snapshot-title">Mayor’s Restaurant &amp; Business Recognition</div>
-            </div>
-            <p class="snapshot-copy"><strong>Why it matters:</strong> Local businesses give the city its character. When they are supported, the whole community benefits.</p>
-          </article>
-        </div>
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">What Neighbors Should Know Right Now</h2>
+        <p class="section-sub">A quick look at the city meetings, community items, and local updates that stand out right now.</p>
       </div>
-    </section>
+    </div>
+
+    <div class="snapshot-grid">
+      <article class="snapshot-card light">
+        <div>
+          <div class="snapshot-label">City Meetings</div>
+          <div class="snapshot-title">Planning &amp; Commission Activity</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> This is where a lot of the city’s development and policy conversations start before most people ever hear about them.</p>
+      </article>
+
+      <article class="snapshot-card green">
+        <div>
+          <div class="snapshot-label">Community Services</div>
+          <div class="snapshot-title">Senior &amp; Family Programs</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> These programs affect real residents, real families, and the kind of support people can count on locally.</p>
+      </article>
+
+      <article class="snapshot-card gold">
+        <div>
+          <div class="snapshot-label">Community Life</div>
+          <div class="snapshot-title">Events That Keep People Connected</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> A city is more than meetings and headlines. These are the things that help West Covina still feel like a community.</p>
+      </article>
+
+      <article class="snapshot-card">
+        <div>
+          <div class="snapshot-label">Local Business</div>
+          <div class="snapshot-title">Who’s Growing, Changing, or Being Recognized</div>
+        </div>
+        <p class="snapshot-copy"><strong>Why it matters:</strong> Local businesses shape the personality of a city. When they grow or struggle, the whole community feels it.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
     <section class="section" id="updates">
   <div class="container">
     <div class="section-header">
       <div>
         <h2 class="section-title">What I’m Keeping an Eye On</h2>
-        <p class="section-sub">Recent local issues, city questions, and West Covina context worth understanding a little better.</p>
+        <p class="section-sub">A few local issues and city conversations worth paying attention to right now.</p>
       </div>
     </div>
 
@@ -661,7 +669,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="card-body">
           <div class="card-tag">City Hall</div>
           <h3 class="card-title">Part 2 Preview: How We Got Here</h3>
-          <p class="card-text">Before getting into documents and claims, this breaks down the bigger background story — the power shifts, lawsuits, and internal conflict that set the stage for what people are seeing now.</p>
+          <p class="card-text">Before getting into documents and claims, this lays out the bigger background story — the power shifts, lawsuits, and internal conflict that set the stage for what people are seeing now.</p>
           <a class="card-link" href="https://open.substack.com/pub/justinpresswc/p/part-2-preview-how-we-got-here?utm_source=share&utm_medium=android&r=7qkf0i" target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </article>
@@ -673,7 +681,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="card-body">
           <div class="card-tag">Accountability</div>
           <h3 class="card-title">Why This Story Matters Beyond One Meeting</h3>
-          <p class="card-text">This is bigger than one tense council moment. It gets into how leadership, staff pressure, public trust, and taxpayer risk can all collide over time.</p>
+          <p class="card-text">This is bigger than one heated council moment. It gets into how leadership, staff pressure, public trust, and taxpayer risk can all collide over time.</p>
           <a class="card-link" href="https://open.substack.com/pub/justinpresswc/p/part-2-preview-how-we-got-here?utm_source=share&utm_medium=android&r=7qkf0i" target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </article>
@@ -685,7 +693,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <div class="card-body">
           <div class="card-tag">Local Context</div>
           <h3 class="card-title">Years of Decisions Led to This Point</h3>
-          <p class="card-text">If people only watch the headlines, they miss the pattern underneath. This piece helps connect the current controversy to the history behind it.</p>
+          <p class="card-text">If people only watch the headline moment, they miss the pattern underneath. This helps connect the current controversy to the history behind it.</p>
           <a class="card-link" href="https://open.substack.com/pub/justinpresswc/p/part-2-preview-how-we-got-here?utm_source=share&utm_medium=android&r=7qkf0i" target="_blank" rel="noopener noreferrer">Read More →</a>
         </div>
       </article>
@@ -701,9 +709,9 @@ import MainLayout from "../layouts/MainLayout.astro";
             <p>When something at home stops working, most people do not need a lecture — they need help. This section is for neighbors who want honest, local tech support without the runaround.</p>
 
             <div class="service-grid">
-              <div class="service">Wi-Fi &amp; Internet</div>
+              <div class="service">Wi-Fi & Internet</div>
               <div class="service">Security Cameras</div>
-              <div class="service">Printers &amp; Devices</div>
+              <div class="service">Printers & Devices</div>
               <div class="service">Digital Privacy</div>
             </div>
 
@@ -736,4 +744,5 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div>West Covina updates • Community information • Local tech help</div>
     </div>
   </footer>
-</MainLayout>
+</body>
+</html>
