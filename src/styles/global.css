@@ -282,3 +282,30 @@ grid-template-columns: 1fr;
 width: 100%;
 }
 }
+.icon-hub-mainlink {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-hub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(31, 116, 183, 0.12);
+}
+
+.icon-hub-links a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.icon-hub-links a:hover {
+  text-decoration: underline;
+  }
