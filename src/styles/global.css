@@ -1,3 +1,25 @@
+:root {
+  --navy: #0f2a44;
+  --blue: #1f74b7;
+  --light-blue: #e8f4ff;
+  --accent: #f59e0b;
+  --bg-soft: #f7f9fc;
+
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+/* Global page background */
+body {
+  background: var(--bg-soft);
+}
+  background: var(--bg-soft);
+}
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
 /* ===== Sections ===== */
 .section {
   padding: 18px 0 10px;
