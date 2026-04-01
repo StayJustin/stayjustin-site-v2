@@ -13,6 +13,7 @@
 /* Global page background */
 body {
   background: var(--bg-soft);
+  color: #111;
 }
   background: var(--bg-soft);
 }
