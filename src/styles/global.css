@@ -2,24 +2,18 @@
   --navy: #0f2a44;
   --blue: #1f74b7;
   --light-blue: #e8f4ff;
-  --accent: #++heyb;0 I'm on my 
+  --accent: #f59e0b;
   --bg-soft: #f7f9fc;
-
   --border: #e5e7eb;
   --muted: #6b7280;
-  --shadow: 0 10px 30px rgba(0,0,0,0.04);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Global page background */
 body {
   background: var(--bg-soft);
-  color: #111;}
-  background: var(--bg-soft);
+  color: #111827;
 }
-  --border: #e5e7eb;
-  --muted: #6b7280;
-  --shadow: 0 10px 30px rgba(0,0,0,0.04);
-}
+
 /* ===== Sections ===== */
 .section {
   padding: 18px 0 10px;
@@ -33,6 +27,7 @@ body {
   margin: 0;
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   letter-spacing: -0.03em;
+  color: var(--navy);
 }
 
 .section-sub {
@@ -121,9 +116,8 @@ body {
   border-radius: 999px;
   font-weight: 800;
   font-size: 0.85rem;
-  color: var(--navy);
-  background: rgba(31, 116, 183, 0.10);
-  border: 1px solid rgba(31, 116, 183, 0.18);
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), #3aa0ff);
   margin-bottom: 14px;
 }
 
@@ -143,11 +137,23 @@ body {
 
 /* ===== Intro Block ===== */
 .intro-block {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 28px;
+  position: relative;
+}
+
+.intro-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--blue);
+  border-top-left-radius: 20px;
 }
 
 .intro-copy {
@@ -158,6 +164,12 @@ body {
 .intro-copy a {
   color: var(--blue);
   font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(31, 116, 183, 0.2);
+}
+
+.intro-copy a:hover {
+  border-bottom: 2px solid var(--blue);
 }
 
 /* ===== Topic Grid ===== */
@@ -168,7 +180,7 @@ body {
 }
 
 .icon-hub-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(232,245,255,0.92));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 245, 255, 0.92));
   border: 1px solid var(--border);
   border-radius: 22px;
   box-shadow: var(--shadow);
@@ -332,7 +344,7 @@ body {
     line-height: 1;
     text-align: center;
     border-radius: 999px;
-    background: rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .nav-optional {
