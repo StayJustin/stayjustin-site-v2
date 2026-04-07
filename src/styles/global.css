@@ -73,7 +73,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* 🔥 NAV LINKS */
+/* 🔥 NAV LINKS (VISIBLE + CLEAN) */
 .nav-links a {
   color: #ffffff;
   font-weight: 700;
@@ -83,22 +83,8 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Main sections stronger */
-.nav-links a:nth-child(1),
-.nav-links a:nth-child(2),
-.nav-links a:nth-child(3) {
-  background: rgba(255, 255, 255, 0.12);
-}
-
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.18);
-}
-
-/* ACTIVE PAGE */
-.nav-links a.active {
-  background: #ffffff;
-  color: #0f2a44;
-  font-weight: 800;
 }
 
 /* ===== BUTTONS ===== */
@@ -114,7 +100,7 @@ body {
   transition: all 0.2s ease;
 }
 
-/* 🔥 SUBSCRIBE BUTTON */
+/* 🔥 SUBSCRIBE BUTTON (HIGH VISIBILITY) */
 .btn-primary {
   background: linear-gradient(135deg, #ff7a18, #ffb347);
   color: #ffffff;
@@ -127,6 +113,7 @@ body {
   box-shadow: 0 12px 28px rgba(255, 122, 24, 0.45);
 }
 
+/* spacing */
 .nav-subscribe {
   white-space: nowrap;
   margin-left: 10px;
