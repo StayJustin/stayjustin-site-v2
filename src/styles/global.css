@@ -66,12 +66,6 @@ body {
   letter-spacing: -0.02em;
 }
 
-.brand-sub {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
 .nav-links {
   display: flex;
   align-items: center;
@@ -79,21 +73,63 @@ body {
   flex-wrap: wrap;
 }
 
+/* 🔥 NAV LINKS */
 .nav-links a {
   color: #ffffff;
   font-weight: 700;
   padding: 10px 14px;
   border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease;
 }
 
-/* Hover effect */
+/* Main sections stronger */
+.nav-links a:nth-child(1),
+.nav-links a:nth-child(2),
+.nav-links a:nth-child(3) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .nav-links a:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ACTIVE PAGE */
+.nav-links a.active {
+  background: #ffffff;
+  color: #0f2a44;
+  font-weight: 800;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+/* 🔥 SUBSCRIBE BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(255, 122, 24, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 122, 24, 0.45);
 }
 
 .nav-subscribe {
   white-space: nowrap;
+  margin-left: 10px;
 }
 
 /* ===== Hero ===== */
