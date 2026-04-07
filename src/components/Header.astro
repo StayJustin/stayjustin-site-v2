@@ -1,16 +1,40 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
 <header class="topbar">
   <div class="container nav">
+    
     <a href="/" class="brand-link" aria-label="StayJustin home">
       <div class="brand-title">StayJustin</div>
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="/west-covina-news/">News</a>
-      <a href="/city-hall/">City Hall</a>
-      <a href="/new-businesses/">Business</a>
-      <a class="nav-optional" href="/development/">Development</a>
-      <a class="nav-optional" href="/traffic-road-closures/">Traffic</a>
-      <a class="nav-optional" href="/events/">Events</a>
+      
+      <a href="/west-covina-news/" class={currentPath.startsWith('/west-covina-news') ? 'active' : ''}>
+        News
+      </a>
+
+      <a href="/city-hall/" class={currentPath.startsWith('/city-hall') ? 'active' : ''}>
+        City Hall
+      </a>
+
+      <a href="/new-businesses/" class={currentPath.startsWith('/new-businesses') ? 'active' : ''}>
+        Business
+      </a>
+
+      <a href="/development/" class={`nav-optional ${currentPath.startsWith('/development') ? 'active' : ''}`}>
+        Development
+      </a>
+
+      <a href="/traffic-road-closures/" class={`nav-optional ${currentPath.startsWith('/traffic-road-closures') ? 'active' : ''}`}>
+        Traffic
+      </a>
+
+      <a href="/events/" class={`nav-optional ${currentPath.startsWith('/events') ? 'active' : ''}`}>
+        Events
+      </a>
+
     </nav>
 
     <a
@@ -21,5 +45,6 @@
     >
       Subscribe
     </a>
+
   </div>
 </header>
