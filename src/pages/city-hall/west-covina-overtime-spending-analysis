@@ -1,0 +1,24 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const title = "west-covina-overtime-spending-analysis | West Covina";
+const description = "West Covina continues emergency repairs at Fire Station 3 due to ongoing safety concerns and infestation issues.";
+---
+<MainLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>Fire Station 3 Emergency Repairs Continue</h1>
+      <p>
+        This page is being updated with a full breakdown of the ongoing
+        emergency repairs at Fire Station 3.
+      </p>
+      <p>
+        The situation involves continued emergency authority due to
+        health and safety concerns, including infestation and facility conditions.
+      </p>
+      <p>
+        Full analysis coming shortly.
+      </p>
+    </div>
+  </section>
+</MainLayout>
