@@ -1,28 +1,79 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
-const title = "Fire Station 3 Emergency Repairs Continue | West Covina";
-const description = "West Covina continues emergency repairs at Fire Station 3 due to ongoing safety concerns and infestation issues.";
+const title = "Fire Station 3 Emergency Repairs Continue in West Covina";
+const description = "West Covina is continuing emergency repairs at Fire Station 3 after a rodent infestation created health and safety concerns.";
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/city-hall/fire-station-3-emergency-repairs-continue/"
+>
   <section class="section">
     <div class="container">
-      <h1>Fire Station 3 Emergency Repairs Continue</h1>
+      <article class="content">
+        <h1>Fire Station 3 Emergency Repairs Continue — What Residents Should Watch</h1>
 
-      <p>
-        This page is being updated with a full breakdown of the ongoing
-        emergency repairs at Fire Station 3.
-      </p>
+        <p>
+          West Covina’s Fire Station 3 remains under emergency repair status after the city
+          identified a significant rodent and rat infestation.
+        </p>
 
-      <p>
-        The situation involves continued emergency authority due to
-        health and safety concerns, including infestation and facility conditions.
-      </p>
+        <p>
+          At the April 7 meeting, the City Council approved emergency repairs. That emergency
+          action allowed the city to bypass the normal competitive bidding process.
+        </p>
 
-      <p>
-        Full analysis coming shortly.
-      </p>
+        <p>
+          Now, the city is being asked to continue that emergency authority.
+        </p>
+
+        <h2>Why emergency status matters</h2>
+
+        <p>
+          Emergency authority is legal and sometimes necessary. But it is also powerful.
+          It allows the city to move quickly while removing some of the normal competition
+          that helps protect taxpayer dollars.
+        </p>
+
+        <p>
+          The city says the infestation creates a clear and imminent danger requiring immediate
+          action to protect health and safety.
+        </p>
+
+        <h2>The accountability point</h2>
+
+        <p>
+          The city must review the emergency at every regular meeting until it ends. The City
+          Manager is expected to report back on why the emergency still exists and whether it
+          needs to continue.
+        </p>
+
+        <h2>Questions residents should ask</h2>
+
+        <ul>
+          <li>What specific conditions still justify emergency status?</li>
+          <li>What progress has been made since April 7?</li>
+          <li>What is the total cost so far?</li>
+          <li>Have there been change orders or added expenses?</li>
+          <li>When will the work return to the normal bidding process?</li>
+        </ul>
+
+        <p>
+          <strong>Bottom line:</strong> Emergency repairs may be justified, but emergency
+          authority should not be open-ended. Residents deserve clear updates, clear costs,
+          and a clear endpoint.
+        </p>
+
+        <h2>Related coverage</h2>
+
+        <ul>
+          <li><a href="/city-hall/april-21-2026-city-council-budget-questions/">April 21 council packet budget questions</a></li>
+          <li><a href="/city-hall/west-covina-q2-financial-report-2025-26/">West Covina Q2 financial report explained</a></li>
+          <li><a href="/city-hall/west-covina-overtime-spending-analysis/">Overtime spending analysis</a></li>
+        </ul>
+      </article>
     </div>
   </section>
 </MainLayout>
