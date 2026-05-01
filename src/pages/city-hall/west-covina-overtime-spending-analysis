@@ -1,24 +1,81 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
-const title = "west-covina-overtime-spending-analysis | West Covina";
-const description = "West Covina continues emergency repairs at Fire Station 3 due to ongoing safety concerns and infestation issues.";
+const title = "West Covina Overtime Spending Is Already Over 50% at Mid-Year";
+const description = "West Covina’s mid-year financial report shows overtime spending already over 50% of the annual budget, with police and fire costs worth watching.";
 ---
-<MainLayout title={title} description={description}>
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/city-hall/west-covina-overtime-spending-analysis/"
+>
   <section class="section">
     <div class="container">
-      <h1>Fire Station 3 Emergency Repairs Continue</h1>
-      <p>
-        This page is being updated with a full breakdown of the ongoing
-        emergency repairs at Fire Station 3.
-      </p>
-      <p>
-        The situation involves continued emergency authority due to
-        health and safety concerns, including infestation and facility conditions.
-      </p>
-      <p>
-        Full analysis coming shortly.
-      </p>
+      <article class="content">
+        <h1>Overtime Spending in West Covina Is Already Over 50% — What Happens Next?</h1>
+
+        <p>
+          One of the biggest numbers in West Covina’s mid-year financial report is overtime.
+        </p>
+
+        <p>
+          The report says General Fund overtime is already at <strong>53.3% of the annual budget</strong>
+          halfway through the fiscal year.
+        </p>
+
+        <h2>Public safety overtime</h2>
+
+        <ul>
+          <li>Fire overtime budget: $3,062,612</li>
+          <li>Fire overtime used so far: $1,774,298</li>
+          <li>Police overtime budget: $3,597,452</li>
+          <li>Police overtime used so far: $1,773,185</li>
+        </ul>
+
+        <p>
+          That means police and fire overtime are already near or above the halfway mark at mid-year.
+        </p>
+
+        <h2>Why that matters</h2>
+
+        <p>
+          At first, that may sound normal. But if the city is counting on overtime reductions
+          later in the year, residents should ask what will actually cause those reductions.
+        </p>
+
+        <p>
+          A budget projection does not reduce overtime by itself.
+        </p>
+
+        <p>
+          If staffing is still short, if new hires are still in training, or if minimum staffing
+          levels must be met, overtime may continue no matter what the budget assumes.
+        </p>
+
+        <h2>Questions residents should ask</h2>
+
+        <ul>
+          <li>Are added police and fire positions fully active?</li>
+          <li>Are some employees still in training?</li>
+          <li>What staffing changes are expected to reduce overtime?</li>
+          <li>If overtime continues running high, where will the money come from?</li>
+        </ul>
+
+        <p>
+          <strong>Bottom line:</strong> Budgets do not reduce overtime. Staffing and operations do.
+          If the city expects overtime to slow down, residents should ask what real-world changes
+          make that possible.
+        </p>
+
+        <h2>Related coverage</h2>
+
+        <ul>
+          <li><a href="/city-hall/west-covina-q2-financial-report-2025-26/">West Covina Q2 financial report explained</a></li>
+          <li><a href="/city-hall/west-covina-fire-management-mou-2024-2028/">Fire Management MOU explained</a></li>
+          <li><a href="/city-hall/april-21-2026-city-council-budget-questions/">April 21 budget questions overview</a></li>
+        </ul>
+      </article>
     </div>
   </section>
 </MainLayout>
