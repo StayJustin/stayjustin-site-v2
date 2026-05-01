@@ -350,3 +350,81 @@
     align-items: flex-start;
   }
 }
+
+/* ===== ARTICLE CONTENT IMPROVEMENT ===== */
+
+article,
+.content,
+.intro-block {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* Main text */
+article p,
+.content p {
+  color: #374151; /* softer than black */
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+/* Headings */
+article h1 {
+  color: #0f2a44;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+article h2 {
+  color: #0f2a44;
+  font-size: 1.4rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+/* Lists */
+article ul {
+  margin: 16px 0;
+  padding-left: 18px;
+}
+
+article li {
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+/* Bold emphasis */
+article strong {
+  color: #111827;
+}
+
+/* Links inside articles */
+article a {
+  color: #1f74b7;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(31, 116, 183, 0.2);
+}
+
+article a:hover {
+  border-bottom: 2px solid #1f74b7;
+}
+
+/* Quote / highlight block */
+blockquote {
+  border-left: 4px solid #f59e0b;
+  padding-left: 14px;
+  color: #4b5563;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Section spacing */
+.section {
+  padding: 28px 0;
+}
