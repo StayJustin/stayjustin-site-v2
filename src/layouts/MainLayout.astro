@@ -1,11 +1,9 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 
 const {
-  title = "StayJustin | West Covina News",
-  description = "West Covina news, city hall updates, new businesses, development, traffic, and local events explained simply.",
+  title = "StayJustIn | West Covina News",
+  description = "StayJustIn covers West Covina City Hall, news, development, business updates, events, traffic, and local resources in simple terms.",
   canonical = "https://www.stayjustin.com/"
 } = Astro.props;
 ---
@@ -16,6 +14,7 @@ const {
     <meta name="google-site-verification" content="googlef61280c40168ecf4.html" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -28,10 +27,71 @@ const {
   </head>
 
   <body>
-    <Header />
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="site-brand" aria-label="StayJustIn home">
+          Stay<span>JustIn</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/city-hall/">City Hall</a>
+          <a href="/west-covina-news/">West Covina News</a>
+          <a href="/development/">Development</a>
+        </nav>
+
+        <a
+          class="subscribe-btn"
+          href="https://stayjustin.substack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Subscribe
+        </a>
+      </div>
+    </header>
+
     <main>
       <slot />
     </main>
-    <Footer />
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Stay<span>JustIn</span></h3>
+          <p>
+            West Covina news, City Hall updates, development, events, and local resources explained simply.
+          </p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <a href="/tech-help/">Tech-Help</a>
+          <a href="/city-hall/">City Hall</a>
+          <a href="/west-covina-news/">West Covina News</a>
+          <a href="/new-businesses/">New Businesses</a>
+          <a href="/development/">Development</a>
+          <a href="/events/">Events</a>
+        </div>
+
+        <div>
+          <h4>Local Resources</h4>
+          <a href="/traffic-road-closures/">Traffic Road Closures</a>
+          <a href="/contact/">Contact</a>
+          <a href="/about/">About</a>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <p>West Covina, CA</p>
+          <p>
+            <a href="mailto:Justin@StayJustin.com">Justin@StayJustIn.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © {new Date().getFullYear()} StayJustIn. All rights reserved.
+      </div>
+    </footer>
   </body>
 </html>
