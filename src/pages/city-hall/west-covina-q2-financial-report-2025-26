@@ -1,24 +1,89 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
-const title = "west-covina-q2-financial-report-2025-26 | West Covina";
-const description = "West Covina continues emergency repairs at Fire Station 3 due to ongoing safety concerns and infestation issues.";
+const title = "West Covina Q2 Financial Report Explained";
+const description = "West Covina’s second quarter financial report shows revenue, spending, and budget pressure halfway through Fiscal Year 2025-26.";
 ---
-<MainLayout title={title} description={description}>
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/city-hall/west-covina-q2-financial-report-2025-26/"
+>
   <section class="section">
     <div class="container">
-      <h1>Fire Station 3 Emergency Repairs Continue</h1>
-      <p>
-        This page is being updated with a full breakdown of the ongoing
-        emergency repairs at Fire Station 3.
-      </p>
-      <p>
-        The situation involves continued emergency authority due to
-        health and safety concerns, including infestation and facility conditions.
-      </p>
-      <p>
-        Full analysis coming shortly.
-      </p>
+      <article class="content">
+        <h1>West Covina Mid-Year Financial Report Shows Spending Moving Faster Than Revenue</h1>
+
+        <p>
+          West Covina’s Second Quarter Financial Report covers July 1, 2025 through
+          December 31, 2025.
+        </p>
+
+        <p>
+          At the halfway point of the fiscal year, the report shows a noticeable gap between
+          General Fund revenue and expenditures.
+        </p>
+
+        <h2>The main numbers</h2>
+
+        <ul>
+          <li>General Fund revenue: $24.8 million</li>
+          <li>General Fund expenditures: $42.6 million</li>
+          <li>Revenue less expenditures: negative $17.8 million</li>
+        </ul>
+
+        <h2>Is this automatically bad?</h2>
+
+        <p>
+          Not necessarily. The report explains that this kind of gap can happen mid-year because
+          major revenues, including property tax and sales tax, arrive later.
+        </p>
+
+        <p>
+          That explanation is reasonable.
+        </p>
+
+        <p>
+          But the gap still matters.
+        </p>
+
+        <h2>Why residents should watch it</h2>
+
+        <p>
+          A budget can appear balanced on paper while the timing and pace of spending create
+          pressure during the year.
+        </p>
+
+        <p>
+          Residents should not ignore that pressure just because some revenue is expected later.
+        </p>
+
+        <h2>No General Fund amendment this quarter</h2>
+
+        <p>
+          The report says there are no General Fund budget amendments proposed this quarter.
+          That may mean the city believes the budget is still on track.
+        </p>
+
+        <p>
+          Or it may mean adjustments are being pushed further into the year.
+        </p>
+
+        <p>
+          <strong>Bottom line:</strong> The numbers may have reasonable explanations, but they still
+          deserve follow-up. Residents should watch whether revenue catches up, whether spending
+          slows, and whether overtime pressure continues.
+        </p>
+
+        <h2>Related coverage</h2>
+
+        <ul>
+          <li><a href="/city-hall/west-covina-overtime-spending-analysis/">Overtime spending analysis</a></li>
+          <li><a href="/city-hall/west-covina-fire-management-mou-2024-2028/">Fire Management MOU explained</a></li>
+          <li><a href="/city-hall/april-21-2026-city-council-budget-questions/">April 21 budget questions overview</a></li>
+        </ul>
+      </article>
     </div>
   </section>
 </MainLayout>
