@@ -455,3 +455,89 @@ blockquote {
   font-weight: 800;
   text-decoration: none;
 }
+
+/* ===== City Hall Page Polish ===== */
+
+.content,
+.intro-block,
+.featured-card,
+.story-card {
+  color: #243447;
+}
+
+.content p,
+.intro-block p,
+.featured-card p,
+.story-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.content h1,
+.content h2,
+.intro-block h1,
+.intro-block h2,
+.featured-card h2,
+.story-card h3 {
+  color: #0f2a44;
+}
+
+.page-kicker {
+  color: #1f74b7;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.summary-box {
+  background: #f0f7ff;
+  border-left: 5px solid #1f74b7;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 20px 0;
+}
+
+.summary-box p {
+  margin: 0;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.story-card {
+  border-top: 4px solid #1f74b7;
+}
+
+.story-card:nth-child(2) {
+  border-top-color: #f59e0b;
+}
+
+.story-card:nth-child(3) {
+  border-top-color: #0f2a44;
+}
+
+.story-card:nth-child(4) {
+  border-top-color: #64748b;
+}
+
+.story-tag {
+  background: #e8f4ff;
+  color: #1f74b7;
+}
+
+.read-more-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1f74b7;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+.section + .section {
+  padding-top: 12px;
+}
