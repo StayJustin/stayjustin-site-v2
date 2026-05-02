@@ -1,18 +1,81 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const title = "West Covina Development Updates | StayJustIn";
+const description =
+  "West Covina development updates, housing projects, planning decisions, Del Norte project coverage, traffic impacts, and city growth explained simply.";
 ---
 
 <MainLayout
-  title="West Covina News | StayJustin"
-  description="Latest West Covina news, local updates, and neighborhood changes explained simply."
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/development/"
 >
   <section class="section">
-    <div class="container intro-block">
-      <h1 class="section-title">West Covina News</h1>
-      <p class="intro-copy">
-        This page will cover the latest news in West Covina including city updates,
-        local issues, and community changes.
-      </p>
+    <div class="container">
+      <article class="content hub-page">
+        <p class="page-kicker">Development</p>
+        <h1>West Covina Development Updates</h1>
+
+        <div class="summary-box">
+          <p>
+            Follow major West Covina development projects, housing proposals,
+            planning decisions, traffic impacts, and long-term neighborhood concerns.
+          </p>
+        </div>
+
+        <p>
+          This page connects the key development stories residents should be watching,
+          including proposed housing projects, land-use changes, and infrastructure questions.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header clean-header">
+        <div>
+          <h2 class="section-title">Featured Development Story</h2>
+          <p class="section-sub">The project residents are watching closely.</p>
+        </div>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="story-tag">Del Norte Project</span>
+          <h3>
+            <a href="/development/del-norte-project-west-covina/">
+              What we know so far about the Del Norte housing project
+            </a>
+          </h3>
+          <p>
+            A proposed housing project near Del Norte Park raises questions about
+            traffic, emergency access, parking, park maintenance, SB 330 fees, and
+            future city costs.
+          </p>
+          <a class="read-more-link" href="/development/del-norte-project-west-covina/">
+            Review the Del Norte breakdown →
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header clean-header">
+        <div>
+          <h2 class="section-title">Related City Coverage</h2>
+          <p class="section-sub">Development decisions often connect back to City Hall.</p>
+        </div>
+      </div>
+
+      <div class="link-list clean-link-list">
+        <a href="/city-hall/">West Covina City Hall updates</a>
+        <a href="/west-covina-news/">Latest West Covina news</a>
+        <a href="/traffic-road-closures/">Traffic and road closure updates</a>
+      </div>
     </div>
   </section>
 </MainLayout>
