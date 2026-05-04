@@ -1,12 +1,10 @@
-/* ===== StayJustIn Clean News Layout ===== */
+---
+import "../styles/global.css";
 
-.site-header {
-  background: linear-gradient(135deg, #0f2a44, #1f74b7);
-  color: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+const title = Astro.props.title ?? "StayJustIn | West Covina News";
+const description = Astro.props.description ?? "West Covina news, City Hall updates, development projects, and local issues explained simply.";
+const canonical = Astro.props.canonical ?? "https://www.stayjustin.com/";
+---
 
 .header-inner {
   min-height: 72px;
