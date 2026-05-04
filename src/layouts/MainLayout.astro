@@ -1,12 +1,13 @@
 ---
-import "../styles/global.css";
-
-const {
-  title = "StayJustIn | West Covina News",
-  description = "West Covina news, City Hall updates, development projects, and local issues explained simply.",
-  canonical = "https://www.stayjustin.com/"
-} = Astro.props;
+import MainLayout from "../layouts/
+MainLayout.astro";
 ---
+
+<MainLayout
+  title="StayJustIn | West Covina News"
+  description="West Covina news, City Hall updates, development, and local issues explained simply."
+  canonical="https://www.stayjustin.com/"
+>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +64,7 @@ const {
         “Speak up for those who cannot speak for themselves.”
       </p>
     </div>
+</MainLayout>
 
     <!-- FOOTER -->
     <footer class="footer">
