@@ -1,63 +1,111 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+
+const title = "West Covina News | StayJustIn";
+const description =
+  "West Covina news, City Hall updates, public safety issues, development, local decisions, and community updates explained simply.";
 ---
 
 <MainLayout
-  title="West Covina News | StayJustin"
-  description="Latest West Covina news, city updates, and local issues explained clearly."
+  title={title}
+  description={description}
   canonical="https://www.stayjustin.com/west-covina-news/"
 >
   <section class="section">
-    <div class="container intro-block">
-      <h1 class="section-title">West Covina News</h1>
+    <div class="container">
+      <article class="content hub-page">
+        <p class="page-kicker">West Covina News</p>
+        <h1>West Covina News and Local Updates</h1>
 
-      <p class="intro-copy">
-        Stay up to date with what’s happening in West Covina — including city decisions,
-        local issues, and important changes affecting residents.
-      </p>
+        <div class="summary-box">
+          <p>
+            Stay up to date on City Hall decisions, local issues, development,
+            public safety, events, and important changes affecting West Covina residents.
+          </p>
+        </div>
 
-      <p class="intro-copy">
-        This page highlights the most important updates so you do not have to dig through
-        meetings, agendas, or scattered posts.
-      </p>
+        <p>
+          This page highlights important stories so residents can review the background,
+          understand what changed, and follow how different local issues connect.
+        </p>
+      </article>
+    </div>
+  </section>
 
-      <h2 class="section-title" style="margin-top: 24px;">Latest Updates</h2>
+  <section class="section">
+    <div class="container">
+      <div class="section-header clean-header">
+        <div>
+          <h2 class="section-title">Important Stories to Review</h2>
+          <p class="section-sub">Catch up on the stories shaping the bigger picture.</p>
+        </div>
+      </div>
 
-<p class="intro-copy">
-      <a href="/city-hall/west-covina-code-of-conduct-censure-explained/">
-  Code of Conduct explained: how censure works in West Covina
-        </a>
-       </p>
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="story-tag">City Hall</span>
+          <h3>
+            <a href="/city-hall/april-21-2026-city-council-budget-questions/">
+              Budget questions residents should be watching
+            </a>
+          </h3>
+          <p>
+            Emergency repairs, overtime, labor costs, and budget assumptions all connect
+            to bigger accountability questions.
+          </p>
+          <a class="read-more-link" href="/city-hall/april-21-2026-city-council-budget-questions/">
+            Read the breakdown →
+          </a>
+        </article>
 
-<p class="intro-copy">
-        <a href="/west-covina-news/west-covina-cjpia-board-appointment-explained/">
-          CJPIA board change explained: who controls West Covina’s legal risk
-        </a>
-      </p>
+        <article class="story-card">
+          <span class="story-tag">Development</span>
+          <h3>
+            <a href="/development/del-norte-project-west-covina/">
+              What we know so far about the Del Norte project
+            </a>
+          </h3>
+          <p>
+            A proposed housing project raises questions about traffic, emergency access,
+            parking, park costs, and long-term City responsibility.
+          </p>
+          <a class="read-more-link" href="/development/del-norte-project-west-covina/">
+            Review the project →
+          </a>
+        </article>
 
-      <p class="intro-copy">
-        <a href="/west-covina-news/west-covina-city-council-meeting-april-7-2026/">
-          What to expect at the April 7 City Council meeting
-        </a>
-      </p>
+        <article class="story-card">
+          <span class="story-tag">Policy</span>
+          <h3>
+            <a href="/city-hall/west-covina-code-of-conduct-censure-explained/">
+              Code of Conduct explained: how censure works
+            </a>
+          </h3>
+          <p>
+            A plain-English explanation of how West Covina’s Code of Conduct creates
+            a formal process for discipline short of removal.
+          </p>
+          <a class="read-more-link" href="/city-hall/west-covina-code-of-conduct-censure-explained/">
+            Understand the rules →
+          </a>
+        </article>
 
-      <h2 class="section-title" style="margin-top: 24px;">Related Coverage</h2>
-
-      <p class="intro-copy">
-        <a href="/city-hall/">West Covina City Hall updates</a>
-      </p>
-
-      <p class="intro-copy">
-        <a href="/city-hall/west-covina-city-hall-investigation/">
-          Full investigation breakdown
-        </a>
-      </p>
-
-      <p class="intro-copy">
-        <a href="/city-hall/west-covina-city-hall-timeline/">
-          Timeline of events
-        </a>
-      </p>
+        <article class="story-card">
+          <span class="story-tag">Legal Risk</span>
+          <h3>
+            <a href="/west-covina-news/west-covina-cjpia-board-appointment-explained/">
+              CJPIA board change explained
+            </a>
+          </h3>
+          <p>
+            Why a board appointment can matter for insurance, lawsuits, claims,
+            and how the city manages legal exposure.
+          </p>
+          <a class="read-more-link" href="/west-covina-news/west-covina-cjpia-board-appointment-explained/">
+            Read the CJPIA breakdown →
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 </MainLayout>
