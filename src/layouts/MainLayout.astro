@@ -1,15 +1,4 @@
 ---
----
----
-import { SpeedInsights } from "@vercel/speed-insights/astro";
-
-interface Props {
-  title: string;
-  description?: string;
-  canonical?: string;
-}
-
-const { title, description, canonical } = Astro.props;
 import "../styles/global.css";
 ---
 
@@ -104,7 +93,6 @@ const {
          <div class="article-principle">
   <p>“Speak up for those who cannot speak for themselves.”</p>
 </div>
-<SpeedInsights/>
       <div class="footer-bottom">
         © {new Date().getFullYear()} StayJustIn. All rights reserved.
       </div>
