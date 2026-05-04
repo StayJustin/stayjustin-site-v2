@@ -1,10 +1,9 @@
 ---
 import "../styles/global.css";
----
 
 const {
   title = "StayJustIn | West Covina News",
-  description = "StayJustIn covers West Covina City Hall, news, development, business updates, events, traffic, and local resources in simple terms.",
+  description = "West Covina news, City Hall updates, development projects, and local issues explained simply.",
   canonical = "https://www.stayjustin.com/"
 } = Astro.props;
 ---
@@ -12,87 +11,95 @@ const {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="google-site-verification" content="googlef61280c40168ecf4.html" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content="index, follow" />
 
+    <!-- Open Graph (for social sharing) -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="/" class="site-brand" aria-label="StayJustIn home">
-          Stay<span>JustIn</span>
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="container nav">
+        <a href="/" class="brand-link">
+          <div class="brand-title">StayJustIn</div>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-links">
           <a href="/city-hall/">City Hall</a>
-          <a href="/west-covina-news/">West Covina News</a>
+          <a href="/west-covina-news/">News</a>
           <a href="/development/">Development</a>
-        </nav>
+        </div>
 
         <a
-          class="subscribe-btn"
-          href="https://stayjustin.substack.com"
+          href="https://stayjustin.substack.com/"
+          class="btn btn-primary nav-subscribe"
           target="_blank"
-          rel="noopener noreferrer"
         >
           Subscribe
         </a>
       </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
       <slot />
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
+    <!-- SCRIPTURE (SUBTLE BRAND ELEMENT) -->
+    <div class="container" style="text-align:center; margin-top:40px;">
+      <p style="color:#6b7280; font-size:0.9rem;">
+        “Speak up for those who cannot speak for themselves.”
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
         <div>
-          <h3>Stay<span>JustIn</span></h3>
+          <div class="footer-title">StayJustIn</div>
           <p>
-            West Covina news, City Hall updates, development, events, and local resources explained simply.
+            West Covina news, City Hall updates, development, events, and local
+            issues explained simply.
           </p>
         </div>
 
         <div>
-          <h4>Explore</h4>
-          <a href="/tech-help/">Tech-Help</a>
-          <a href="/city-hall/">City Hall</a>
-          <a href="/west-covina-news/">West Covina News</a>
-          <a href="/new-businesses/">New Businesses</a>
-          <a href="/development/">Development</a>
-          <a href="/events/">Events</a>
+          <div class="footer-title">Explore</div>
+          <div class="footer-links">
+            <a href="/city-hall/">City Hall</a>
+            <a href="/west-covina-news/">News</a>
+            <a href="/development/">Development</a>
+            <a href="/events/">Events</a>
+          </div>
         </div>
 
         <div>
-          <h4>Local Resources</h4>
-          <a href="/traffic-road-closures/">Traffic Road Closures</a>
-          <a href="/contact/">Contact</a>
-          <a href="/about/">About</a>
+          <div class="footer-title">More</div>
+          <div class="footer-links">
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
         </div>
 
         <div>
-          <h4>Connect</h4>
+          <div class="footer-title">Connect</div>
           <p>West Covina, CA</p>
-          <p>
-            <a href="mailto:Justin@StayJustin.com">Justin@StayJustIn.com</a>
-          </p>
+          <p>hello@stayjustin.com</p>
         </div>
       </div>
 
-         <div class="article-principle">
-  <p>“Speak up for those who cannot speak for themselves.”</p>
-</div>
       <div class="footer-bottom">
         © {new Date().getFullYear()} StayJustIn. All rights reserved.
       </div>
