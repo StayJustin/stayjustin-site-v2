@@ -1,9 +1,10 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import PrincipleVerse from "../../components/PrincipleVerse.astro";
 
-const title = "West Covina Development Updates | StayJustIn";
+const title = "West Covina Development Projects | StayJustIn";
 const description =
-  "West Covina development updates, housing projects, planning decisions, Del Norte project coverage, traffic impacts, and city growth explained simply.";
+  "Track West Covina development projects including the City Yard (Brandywine), Del Norte housing proposal, and other major planning decisions explained in plain English.";
 ---
 
 <MainLayout
@@ -11,71 +12,137 @@ const description =
   description={description}
   canonical="https://www.stayjustin.com/development/"
 >
+
+  <!-- HERO / INTRO -->
   <section class="section">
     <div class="container">
       <article class="content hub-page">
-        <p class="page-kicker">Development</p>
-        <h1>West Covina Development Updates</h1>
+        <p class="page-kicker">West Covina Development</p>
+        <h1>Development Projects Residents Should Watch</h1>
 
         <div class="summary-box">
           <p>
-            Follow major West Covina development projects, housing proposals,
-            planning decisions, traffic impacts, and long-term neighborhood concerns.
+            Major housing and land-use decisions are shaping West Covina’s future —
+            from the City Yard sale to new residential developments.
           </p>
         </div>
 
         <p>
-          This page connects the key development stories residents should be watching,
-          including proposed housing projects, land-use changes, and infrastructure questions.
+          This page tracks the most important development projects so residents can
+          understand what’s being proposed, what it could cost, and how it may impact
+          traffic, safety, infrastructure, and the city budget.
         </p>
       </article>
     </div>
   </section>
 
+  <!-- 🔥 FEATURED PROJECT -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="featured-card">
+        <span class="featured-badge">Featured Project</span>
+
+        <h2>
+          <a href="/development/west-covina-city-yard-brandywine-project/">
+            City Yard (Brandywine) Development Proposal Explained
+          </a>
+        </h2>
+
+        <p>
+          West Covina is considering selling City-owned land while relocating Fire Station 1
+          and City operations. This breakdown explains the deal, the risks, and the key questions residents should ask.
+        </p>
+
+        <a href="/development/west-covina-city-yard-brandywine-project/" class="read-more">
+          Read full breakdown →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧩 PROJECT BREAKDOWNS -->
   <section class="section">
     <div class="container">
       <div class="section-header clean-header">
         <div>
-          <h2 class="section-title">Featured Development Story</h2>
-          <p class="section-sub">The project residents are watching closely.</p>
+          <h2 class="section-title">Project Breakdowns</h2>
+          <p class="section-sub">Individual developments explained in plain English.</p>
         </div>
       </div>
 
       <div class="story-grid">
+
+        <!-- Del Norte -->
         <article class="story-card">
-          <span class="story-tag">Del Norte Project</span>
+          <span class="story-tag">Housing</span>
           <h3>
-            <a href="/development/del-norte-project-west-covina/">
-              What we know so far about the Del Norte housing project
+            <a href="/development/del-norte-housing-project-west-covina/">
+              Del Norte Housing Project: What Residents Should Know
             </a>
           </h3>
           <p>
-            A proposed housing project near Del Norte Park raises questions about
-            traffic, emergency access, parking, park maintenance, SB 330 fees, and
-            future city costs.
+            A proposed residential development on a former school site raises questions about traffic,
+            parking, safety, and long-term City costs.
           </p>
-          <a class="read-more-link" href="/development/del-norte-project-west-covina/">
-            Review the Del Norte breakdown →
-          </a>
         </article>
+
+        <!-- City Yard -->
+        <article class="story-card">
+          <span class="story-tag">City Property</span>
+          <h3>
+            <a href="/development/west-covina-city-yard-brandywine-project/">
+              City Yard Sale & Brandywine Proposal Breakdown
+            </a>
+          </h3>
+          <p>
+            The City may sell a major property and relocate core services. Here’s what that means and what’s still unclear.
+          </p>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- 🔗 CONNECTED ISSUES -->
+  <section class="section topics-section">
     <div class="container">
-      <div class="section-header clean-header">
-        <div>
-          <h2 class="section-title">Related City Coverage</h2>
-          <p class="section-sub">Development decisions often connect back to City Hall.</p>
+      <h2 class="section-title">How Development Connects to Other Issues</h2>
+
+      <div class="topics-grid">
+        <a href="/city-hall/" class="topic-card">
+          <span>🏛️</span> City Hall Decisions
+        </a>
+
+        <a href="/west-covina-news/" class="topic-card">
+          <span>📰</span> Local News
+        </a>
+
+        <a href="/events/" class="topic-card">
+          <span>📍</span> Community Impact
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔻 BOTTOM LINKS (NO CARDS) -->
+  <section class="section bottom-links-section">
+    <div class="container">
+      <div class="bottom-links-card">
+        <h2>More Local Coverage</h2>
+        <p>Explore other areas impacting West Covina residents.</p>
+
+        <div class="bottom-link-list">
+          <a href="/tech-help/">Tech</a>
+          <a href="/city-hall/">City Hall</a>
+          <a href="/west-covina-news/">News</a>
+          <a href="/new-businesses/">Business</a>
+          <a href="/events/">Events</a>
         </div>
       </div>
-
-      <div class="link-list clean-link-list">
-        <a href="/city-hall/">West Covina City Hall updates</a>
-        <a href="/west-covina-news/">Latest West Covina news</a>
-        <a href="/traffic-road-closures/">Traffic and road closure updates</a>
-      </div>
     </div>
   </section>
+
+  <!-- ✝️ “Suppose one of you wants to build a tower. Won’t you first sit down and estimate the cost?” — Luke 14:28 -->
+  <PrincipleVerse />
+
 </MainLayout>
