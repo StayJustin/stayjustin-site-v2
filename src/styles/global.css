@@ -1,5 +1,23 @@
 /* ===== StayJustIn Clean News Layout ===== */
 
+.memorial-bar {
+  background: linear-gradient(90deg, #0f2a44, #1f74b7);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border-bottom: 3px solid #f59e0b;
+}
+
+.memorial-bar::before,
+.memorial-bar::after {
+  content: "★";
+  color: #f59e0b;
+  margin: 0 10px;
+}
+
 .site-header {
   background: linear-gradient(135deg, #0f2a44, #1f74b7);
   color: #ffffff;
