@@ -2,8 +2,12 @@
 import "../styles/global.css";
 
 const title = Astro.props.title ?? "StayJustIn";
-const description = Astro.props.description ?? "West Covina news, City Hall updates, development, and local issues.";
-const canonical = Astro.props.canonical ?? "https://www.stayjustin.com/";
+const description =
+  Astro.props.description ??
+  "West Covina news, City Hall updates, development, and local issues.";
+
+const canonical =
+  Astro.props.canonical ?? "https://www.stayjustin.com/";
 ---
 
 <!DOCTYPE html>
@@ -17,17 +21,6 @@ const canonical = Astro.props.canonical ?? "https://www.stayjustin.com/";
   </head>
 
   <body>
-    ---
-import "../styles/global.css";
-
-const title = Astro.props.title ?? "StayJustIn";
-const description =
-  Astro.props.description ??
-  "West Covina news, City Hall updates, development, and local issues.";
-
-const canonical =
-  Astro.props.canonical ?? "https://www.stayjustin.com/";
----
 
 <html lang="en">
   <head>
