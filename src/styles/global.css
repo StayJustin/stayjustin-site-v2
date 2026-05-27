@@ -1,26 +1,45 @@
 /* ===== Memorial Day Banner ===== */
 
 .memorial-bar {
-  background: linear-gradient(90deg, #0f2a44, #1f74b7);
+  background:
+    linear-gradient(
+      90deg,
+      #b22234 0%,
+      #b22234 20%,
+      #ffffff 20%,
+      #ffffff 40%,
+      #0a3161 40%,
+      #0a3161 60%,
+      #ffffff 60%,
+      #ffffff 80%,
+      #b22234 80%,
+      #b22234 100%
+    );
+
   color: #ffffff;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 18px;
   flex-wrap: wrap;
   text-align: center;
-  padding: 10px 14px;
-  font-size: 0.88rem;
+  padding: 12px 14px;
+  font-size: 0.9rem;
   font-weight: 800;
   border-bottom: 3px solid #f59e0b;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .memorial-bar span {
-  position: relative;
+  background: rgba(0,0,0,0.35);
+  padding: 6px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
 }
 
 .memorial-bar span:not(:last-child)::after {
   content: "★";
-  color: #f59e0b;
+  color: #fbbf24;
   margin-left: 18px;
 }
 
