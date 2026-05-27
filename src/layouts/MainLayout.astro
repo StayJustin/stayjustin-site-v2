@@ -17,7 +17,99 @@ const canonical = Astro.props.canonical ?? "https://www.stayjustin.com/";
   </head>
 
   <body>
+    ---
+import "../styles/global.css";
 
+const title = Astro.props.title ?? "StayJustIn";
+const description = Astro.props.description ?? "West Covina news, City Hall updates, development, and local issues.";
+const canonical = Astro.props.canonical ?? "https://www.stayjustin.com/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+  </head>
+
+  <body>
+
+<div class="memorial-bar">
+  <span>🇺🇸 Memorial Day</span>
+  <span>Honoring all who served</span>
+  <span>We will never forget</span>
+</div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+
+        <a href="/" class="site-brand">
+          Stay<span>JustIn</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="/city-hall/">City Hall</a>
+          <a href="/west-covina-news/">News</a>
+          <a href="/development/">Development</a>
+        </nav>
+
+        <a href="https://stayjustin.substack.com/" class="subscribe-btn">
+          Subscribe
+        </a>
+
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+
+        <div>
+          <h3>Stay<span>JustIn</span></h3>
+          <p>West Covina news, City Hall updates, development, and local issues explained simply.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <a href="/tech-help/">Tech</a>
+          <a href="/city-hall/">City Hall</a>
+          <a href="/west-covina-news/">News</a>
+          <a href="/development/">Development</a>
+          <a href="/events/">Events</a>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <a href="/new-businesses/">Business</a>
+          <a href="/traffic-road-closures/">Road Closures</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </div>
+
+        <div>
+          <h4>Location</h4>
+          <p>West Covina, CA</p>
+          <p>Justin@StayJustIn.com</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© {new Date().getFullYear()} StayJustIn</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
     <!-- HEADER -->
     <header class="site-header">
       <div class="container header-inner">
