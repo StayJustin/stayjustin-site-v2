@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 const title = Astro.props.title ?? "StayJustIn";
 const description =
@@ -17,6 +18,7 @@ const canonical =
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <SpeedInsights />
   </head>
 
   <body>
