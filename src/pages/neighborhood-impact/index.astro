@@ -1,0 +1,70 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleStyles from "../../components/ArticleStyles.astro";
+
+const title = "Neighborhood Impact | StayJustIn";
+const description = "Ongoing West Covina coverage focused on street sweeping, parking, traffic, signage, roads, local services, and daily neighborhood issues that affect residents.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/neighborhood-impact/"
+>
+  <ArticleStyles />
+
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Neighborhood Impact</p>
+
+      <h1>Neighborhood Impact</h1>
+
+      <p class="article-dek">
+        Coverage of the West Covina issues residents feel closest to home — street sweeping, parking, signage, traffic, roads, enforcement, and neighborhood-level city services.
+      </p>
+
+      <p><strong>Status:</strong> Ongoing Coverage Area</p>
+
+      <div class="info-box">
+        <h2>What This Section Covers</h2>
+
+        <ul class="check-list">
+          <li>Street sweeping rules, parking concerns, warning notices, and ticket enforcement.</li>
+          <li>Traffic, signage, roads, sidewalks, and neighborhood safety issues.</li>
+          <li>City service changes that directly affect residents where they live.</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Questions Residents Are Asking</h2>
+
+        <ul class="question-list">
+          <li>When do new rules or enforcement changes begin?</li>
+          <li>How will residents be notified before penalties or tickets are issued?</li>
+          <li>Which neighborhoods or streets are most affected?</li>
+          <li>How can residents report concerns or request follow-up?</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Featured Neighborhood Impact Stories</h2>
+
+        <ul class="article-link-list">
+          <li>
+            <a href="/neighborhood-impact/west-covina-street-sweeping-parking-concerns/">
+              Why Street Sweeping Has Residents Showing Up to City Hall
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        StayJustIn is reviewing public documents, council discussions, and future city actions to update this section.
+      </p>
+
+      <hr />
+
+      <p><em>More neighborhood impact stories coming soon.</em></p>
+    </div>
+  </section>
+</MainLayout>
