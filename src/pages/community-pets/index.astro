@@ -1,0 +1,70 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleStyles from "../../components/ArticleStyles.astro";
+
+const title = "Community & Pets | StayJustIn";
+const description = "Ongoing West Covina coverage focused on animal services, pet rules, spay and neuter requirements, microchipping, shelter issues, and community resources.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/community-pets/"
+>
+  <ArticleStyles />
+
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Community &amp; Pets</p>
+
+      <h1>Community &amp; Pets</h1>
+
+      <p class="article-dek">
+        Coverage of West Covina animal services, pet rules, shelter issues, spay and neuter requirements, microchipping, local resources, and community concerns affecting pet owners.
+      </p>
+
+      <p><strong>Status:</strong> Ongoing Coverage Area</p>
+
+      <div class="info-box">
+        <h2>What This Section Covers</h2>
+
+        <ul class="check-list">
+          <li>Spay, neuter, and microchip requirements affecting West Covina pet owners.</li>
+          <li>Animal shelter services, pet recovery, licensing, and enforcement questions.</li>
+          <li>Low-cost resources, public education, and community support for responsible pet ownership.</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Questions Residents Are Asking</h2>
+
+        <ul class="question-list">
+          <li>Who is affected by new pet-related rules?</li>
+          <li>What exemptions or assistance programs are available?</li>
+          <li>Will there be education before enforcement?</li>
+          <li>Where can residents find low-cost spay, neuter, or microchip services?</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Featured Community &amp; Pets Stories</h2>
+
+        <ul class="article-link-list">
+          <li>
+            <a href="/community-pets/west-covina-spay-neuter-microchip-requirements/">
+              New Spay, Neuter, and Microchip Rules Explained
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        StayJustIn is reviewing public documents, council discussions, and future city actions to update this section.
+      </p>
+
+      <hr />
+
+      <p><em>More community and pet-related stories coming soon.</em></p>
+    </div>
+  </section>
+</MainLayout>
