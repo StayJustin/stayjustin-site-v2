@@ -1,0 +1,116 @@
+---
+interface TrackerItem {
+  question: string;
+  status: "pending" | "answered" | "no-response";
+  note?: string;
+}
+
+interface Props {
+  title: string;
+  items: TrackerItem[];
+}
+
+const { title, items } = Astro.props;
+
+const getStatusBadge = (status: string) => {
+  switch (status) {
+    case "answered":
+      return { icon: "🟢", label: "Answered", class: "status-answered" };
+    case "pending":
+      return { icon: "🟡", label: "Pending", class: "status-pending" };
+    case "no-response":
+      return { icon: "🔴", label: "No Response", class: "status-no-response" };
+    default:
+      return { icon: "⚪", label: "Unknown", class: "status-unknown" };
+  }
+};
+---
+
+<div class="tracker">
+  <h3>{title}</h3>
+  
+  <div class="tracker-items">
+    {items.map((item) => {
+      const badge = getStatusBadge(item.status);
+      return (
+        <div class={`tracker-item ${badge.class}`}>
+          <div class="tracker-header">
+            <span class="status-badge">{badge.icon} {badge.label}</span>
+          </div>
+          <p class="tracker-question">{item.question}</p>
+          {item.note && <p class="tracker-note">{item.note}</p>}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+<style>
+  .tracker {
+    margin: 2rem 0;
+  }
+
+  .tracker h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .tracker-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tracker-item {
+    border-left: 4px solid var(--status-color, #d1d5db);
+    padding: 1rem;
+    background-color: var(--status-bg, #f9fafb);
+    border-radius: 0.375rem;
+  }
+
+  .tracker-item.status-answered {
+    --status-color: #16a34a;
+    --status-bg: #f0fdf4;
+  }
+
+  .tracker-item.status-pending {
+    --status-color: #eab308;
+    --status-bg: #fefce8;
+  }
+
+  .tracker-item.status-no-response {
+    --status-color: #dc2626;
+    --status-bg: #fef2f2;
+  }
+
+  .tracker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .status-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .tracker-question {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .tracker-note {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary, #666);
+    font-style: italic;
+    line-height: 1.4;
+  }
+</style>
