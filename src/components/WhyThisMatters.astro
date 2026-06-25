@@ -1,0 +1,56 @@
+---
+interface Props {
+  items: string[];
+  title?: string;
+}
+
+const { items, title = "Why This Matters" } = Astro.props;
+---
+
+<div class="callout why-this-matters">
+  <h3>{title}</h3>
+  
+  {items.length > 0 && (
+    <ul>
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )}
+</div>
+
+<style>
+  .why-this-matters {
+    border-left: 4px solid var(--color-primary, #2563eb);
+    background-color: var(--color-bg-callout, #f0f9ff);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .why-this-matters h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .why-this-matters ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style-type: none;
+  }
+
+  .why-this-matters li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .why-this-matters li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+</style>
