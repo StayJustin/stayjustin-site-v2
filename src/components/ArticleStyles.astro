@@ -1,13 +1,17 @@
 ---
 interface Props {
+  title?: string;
   text: string;
 }
 
-const { text } = Astro.props;
+const {
+  title = "Summary",
+  text
+} = Astro.props;
 ---
 
 <section class="article-summary">
-  <h2>Summary</h2>
+  <h2>{title}</h2>
 
   <p>{text}</p>
 </section>
@@ -22,8 +26,7 @@ const { text } = Astro.props;
   }
 
   .article-summary h2 {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.75rem;
     font-size: 1.35rem;
   }
 
