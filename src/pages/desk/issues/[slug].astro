@@ -4,10 +4,10 @@ import streetSweeping from "../../../data/issues/street-sweeping.json";
 import delNorte from "../../../data/issues/del-norte.json";
 import athens from "../../../data/issues/athens.json";
 
-const issues = [streetSweeping, delNorte, athens];
-
 export function getStaticPaths() {
-  return issues.map((issue) => ({
+  const issueList = [streetSweeping, delNorte, athens];
+
+  return issueList.map((issue) => ({
     params: { slug: issue.slug },
     props: { issue }
   }));
