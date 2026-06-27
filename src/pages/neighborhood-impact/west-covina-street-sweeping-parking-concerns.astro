@@ -1,6 +1,14 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import ArticleStyles from "../../components/ArticleStyles.astro";
+import ArticleSummary from "../../components/ArticleSummary.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import WhyThisMatters from "../../components/WhyThisMatters.astro";
+import WhatWeKnow from "../../components/WhatWeKnow.astro";
+import WhatWeDontKnow from "../../components/WhatWeDontKnow.astro";
+import QuestionsResidentsShouldAsk from "../../components/QuestionsResidentsShouldAsk.astro";
+import AccountabilityTracker from "../../components/AccountabilityTracker.astro";
+import CommunityFeedback from "../../components/CommunityFeedback.astro";
+import RelatedCoverage from "../../components/RelatedCoverage.astro";
 
 const title = "Why Street Sweeping Has Residents Showing Up to City Hall | StayJustIn";
 const description = "A developing breakdown of West Covina street sweeping concerns, including parking signs, enforcement, warnings, tickets, and resident communication.";
@@ -11,48 +19,90 @@ const description = "A developing breakdown of West Covina street sweeping conce
   description={description}
   canonical="https://www.stayjustin.com/neighborhood-impact/west-covina-street-sweeping-parking-concerns/"
 >
-  <ArticleStyles />
-
   <section class="article-page">
     <div class="container article-container">
       <p class="page-kicker">Neighborhood Impact</p>
 
       <h1>Why Street Sweeping Has Residents Showing Up to City Hall</h1>
 
-      <p class="article-dek">
-        Street sweeping has become one of West Covina's most visible neighborhood issues as residents raise concerns about parking, signs, warnings, and possible tickets.
-      </p>
+      <ArticleMetadata
+        category="Neighborhood Impact"
+        updated="Developing story"
+      />
 
-      <p><strong>Status:</strong> Developing Story</p>
+      <ArticleSummary text="Street sweeping has become one of West Covina's most visible neighborhood issues as residents raise concerns about parking, signs, warnings, enforcement, and possible tickets." />
 
-      <div class="info-box">
-        <h2>What We Know So Far</h2>
+      <WhyThisMatters
+        items={[
+          "Street sweeping affects residents citywide, not just one neighborhood.",
+          "The issue connects clean streets with parking access, signage, notice, and enforcement.",
+          "Residents want clear information before penalties begin."
+        ]}
+      />
 
-        <ul class="check-list">
-          <li>Residents have raised concerns about street sweeping, parking signs, and possible tickets.</li>
-          <li>The issue is about communication, notice, signage, and enforcement.</li>
-          <li>Residents are not against cleaner streets; they want clear information before penalties begin.</li>
-        </ul>
-      </div>
+      <WhatWeKnow
+        items={[
+          "Residents have raised concerns about street sweeping, parking signs, and possible tickets.",
+          "The issue is about communication, notice, signage, and enforcement.",
+          "Residents are not against cleaner streets; they want clear information before penalties begin."
+        ]}
+      />
 
-      <div class="info-box">
-        <h2>Questions Residents Are Asking</h2>
+      <WhatWeDontKnow
+        items={[
+          "The exact enforcement timeline still needs to be clearly confirmed for residents.",
+          "It is not yet clear how warnings, grace periods, or first-time violations will be handled.",
+          "Residents still need a clear way to confirm which streets, days, and parking restrictions apply to them."
+        ]}
+      />
 
-        <ul class="question-list">
-          <li>When does enforcement begin?</li>
-          <li>Will warnings be issued before tickets?</li>
-          <li>Which streets are affected?</li>
-          <li>Where should residents park if space is limited?</li>
-        </ul>
-      </div>
+      <QuestionsResidentsShouldAsk
+        questions={[
+          "When does enforcement begin?",
+          "Will warnings be issued before tickets?",
+          "Which streets are affected?",
+          "Where should residents park if space is limited?",
+          "How will the City communicate changes before enforcement starts?"
+        ]}
+      />
 
-      <p>
-        StayJustIn is reviewing public documents, council discussions, and future city actions to update this story.
-      </p>
+      <AccountabilityTracker
+        title="Street Sweeping Accountability Tracker"
+        items={[
+          {
+            question: "Has the City clearly announced when enforcement begins?",
+            status: "pending",
+            note: "Residents are still asking for clear timing and notice."
+          },
+          {
+            question: "Has the City explained whether warnings will come before tickets?",
+            status: "pending",
+            note: "This remains one of the most common resident questions."
+          },
+          {
+            question: "Has the City provided a simple map or street-by-street schedule?",
+            status: "pending",
+            note: "A clear public schedule would help residents avoid confusion."
+          }
+        ]}
+      />
 
-      <hr />
+      <CommunityFeedback />
 
-      <p><em>Full investigation coming soon.</em></p>
+      <RelatedCoverage
+        items={[
+          {
+            title: "Neighborhood Impact",
+            href: "/neighborhood-impact/",
+            description: "Follow local issues affecting parking, streets, neighborhoods, and daily life."
+          },
+          {
+            title: "City Hall Watch",
+            href: "/city-hall/",
+            description: "Track City Council decisions, public meetings, spending, and policy changes."
+          }
+        ]}
+      />
     </div>
   </section>
 </MainLayout>

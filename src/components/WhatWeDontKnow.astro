@@ -1,0 +1,35 @@
+---
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="info-box what-we-dont-know">
+  <h3>What We Don’t Know Yet</h3>
+
+  <ul>
+    {items.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .what-we-dont-know {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0.5rem;
+  }
+
+  .what-we-dont-know h3 {
+    margin-top: 0;
+  }
+
+  .what-we-dont-know li {
+    margin-bottom: 0.75rem;
+  }
+</style>

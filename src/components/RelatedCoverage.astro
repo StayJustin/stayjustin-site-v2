@@ -1,0 +1,72 @@
+---
+interface RelatedItem {
+  title: string;
+  href: string;
+  description?: string;
+}
+
+interface Props {
+  title?: string;
+  items: RelatedItem[];
+}
+
+const { title = "Related Coverage", items } = Astro.props;
+---
+
+{items.length > 0 && (
+  <section class="related-coverage">
+    <h3>{title}</h3>
+
+    <div class="related-list">
+      {items.map((item) => (
+        <a href={item.href} class="related-card">
+          <strong>{item.title}</strong>
+          {item.description && <p>{item.description}</p>}
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-coverage {
+    margin: 2.5rem 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .related-coverage h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .related-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .related-card {
+    display: block;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .related-card:hover {
+    border-color: #111827;
+  }
+
+  .related-card strong {
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  .related-card p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+</style>

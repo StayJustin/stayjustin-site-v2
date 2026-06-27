@@ -1,0 +1,35 @@
+---
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+---
+
+<section class="info-box what-we-know">
+  <h3>What We Know</h3>
+
+  <ul>
+    {items.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .what-we-know {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    border-radius: 0.5rem;
+  }
+
+  .what-we-know h3 {
+    margin-top: 0;
+  }
+
+  .what-we-know li {
+    margin-bottom: 0.75rem;
+  }
+</style>

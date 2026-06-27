@@ -1,0 +1,35 @@
+---
+interface Props {
+  questions: string[];
+}
+
+const { questions } = Astro.props;
+---
+
+<section class="info-box resident-questions">
+  <h3>Questions Residents Should Ask</h3>
+
+  <ul>
+    {questions.map((question) => (
+      <li>{question}</li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .resident-questions {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 0.5rem;
+  }
+
+  .resident-questions h3 {
+    margin-top: 0;
+  }
+
+  .resident-questions li {
+    margin-bottom: 0.75rem;
+  }
+</style>

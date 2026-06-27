@@ -1,0 +1,39 @@
+---
+interface Props {
+  category?: string;
+  published?: string;
+  updated?: string;
+  author?: string;
+}
+
+const {
+  category = "StayJustIn Report",
+  published,
+  updated,
+  author = "StayJustIn"
+} = Astro.props;
+---
+
+<div class="article-metadata" aria-label="Article information">
+  <span>{category}</span>
+  {published && <span>Published: {published}</span>}
+  {updated && <span>Updated: {updated}</span>}
+  {author && <span>By {author}</span>}
+</div>
+
+<style>
+  .article-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 1rem 0 1.5rem;
+    color: #4b5563;
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+
+  .article-metadata span {
+    display: inline-flex;
+    align-items: center;
+  }
+</style>
