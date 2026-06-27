@@ -1,0 +1,120 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleSummary from "../../components/ArticleSummary.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import WhyThisMatters from "../../components/WhyThisMatters.astro";
+import WhatWeKnow from "../../components/WhatWeKnow.astro";
+import WhatWeDontKnow from "../../components/WhatWeDontKnow.astro";
+import QuestionsResidentsShouldAsk from "../../components/QuestionsResidentsShouldAsk.astro";
+import AccountabilityTracker from "../../components/AccountabilityTracker.astro";
+import CommunityFeedback from "../../components/CommunityFeedback.astro";
+import RelatedCoverage from "../../components/RelatedCoverage.astro";
+
+const title = "Street Sweeping Accountability Hub | StayJustIn";
+const description = "A living tracker for West Covina street sweeping concerns, parking signs, enforcement timing, warnings, tickets, and resident questions.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/accountability/street-sweeping/"
+>
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Accountability Hub</p>
+
+      <h1>Street Sweeping, Parking, Signs, and Enforcement</h1>
+
+      <ArticleMetadata
+        category="Accountability Tracker"
+        updated="Developing issue"
+      />
+
+      <ArticleSummary text="This hub tracks West Covina street sweeping questions involving enforcement timing, parking restrictions, signage, warnings, possible tickets, and what residents need to know before penalties begin." />
+
+      <WhyThisMatters
+        items={[
+          "Street sweeping affects residents across the city, including people with limited parking options.",
+          "Confusing signs or unclear enforcement dates can quickly turn a city service into a resident penalty issue.",
+          "A permanent hub makes it easier to track updates without burying residents in scattered articles."
+        ]}
+      />
+
+      <WhatWeKnow
+        items={[
+          "Residents have raised concerns about street sweeping, parking signs, warnings, and possible tickets.",
+          "The issue is not simply about clean streets; it also involves communication, notice, parking access, and enforcement.",
+          "StayJustIn is tracking this as an active accountability issue because residents are still seeking clear answers."
+        ]}
+      />
+
+      <WhatWeDontKnow
+        items={[
+          "The exact enforcement timeline still needs to be clearly confirmed in a simple public-facing way.",
+          "It is not yet clear how warnings, grace periods, or first-time violations will be handled citywide.",
+          "Residents still need an easy way to confirm which streets, days, and parking restrictions apply to their homes."
+        ]}
+      />
+
+      <QuestionsResidentsShouldAsk
+        questions={[
+          "What is the official enforcement start date?",
+          "Will residents receive warnings before citations are issued?",
+          "Which streets are moving to different or alternating sweeping schedules?",
+          "How will the City fix missing, outdated, unclear, or conflicting signs before enforcement?",
+          "Where should residents park when both parking supply and sweeping restrictions collide?",
+          "Will the City publish a simple map or searchable street list?"
+        ]}
+      />
+
+      <AccountabilityTracker
+        title="Street Sweeping Follow-Up Tracker"
+        items={[
+          {
+            question: "Has the City clearly announced when citations will begin?",
+            status: "pending",
+            note: "This is the main question residents need answered before enforcement begins."
+          },
+          {
+            question: "Has the City published a street-by-street map or searchable schedule?",
+            status: "pending",
+            note: "A simple public map would reduce confusion and repeated resident questions."
+          },
+          {
+            question: "Has the City explained how warning notices will work before tickets?",
+            status: "pending",
+            note: "Residents need to know whether there will be a grace period or warning process."
+          },
+          {
+            question: "Has the City identified and corrected missing, old, or improper signs?",
+            status: "pending",
+            note: "Signage needs to be clear before enforcement is fair."
+          }
+        ]}
+      />
+
+      <CommunityFeedback />
+
+      <RelatedCoverage
+        title="Continue Following This Issue"
+        items={[
+          {
+            title: "Why Street Sweeping Has Residents Showing Up to City Hall",
+            href: "/neighborhood-impact/west-covina-street-sweeping-parking-concerns/",
+            description: "The original developing story explaining resident concerns about parking, signs, warnings, and possible tickets."
+          },
+          {
+            title: "Neighborhood Impact",
+            href: "/neighborhood-impact/",
+            description: "Follow daily-life issues affecting streets, parking, neighborhoods, and city services."
+          },
+          {
+            title: "City Hall Watch",
+            href: "/city-hall/",
+            description: "Track public meetings, policy decisions, spending, contracts, and city responses."
+          }
+        ]}
+      />
+    </div>
+  </section>
+</MainLayout>
