@@ -1,0 +1,43 @@
+{
+  "slug": "street-sweeping",
+  "title": "Street Sweeping",
+  "status": "Active",
+  "summary": "Tracking West Covina street sweeping, parking restrictions, signs, enforcement timing, warnings, and resident questions.",
+  "category": "Neighborhood Impact",
+  "priority": "High",
+  "lastUpdated": "2026-06-27",
+  "hubUrl": "/accountability/street-sweeping/",
+  "openQuestions": [
+    "When does citation enforcement officially begin?",
+    "Will residents receive warnings before tickets?",
+    "Which streets are affected by alternating-side sweeping?",
+    "Which signs still need correction?"
+  ],
+  "timeline": [
+    {
+      "date": "2025-01-06",
+      "label": "Weekly sweeping program reportedly began",
+      "note": "Source still needs to be attached in the evidence binder."
+    },
+    {
+      "date": "2026-06-16",
+      "label": "Council discussed delaying citations",
+      "note": "Follow-up report and clear enforcement timing still need tracking."
+    }
+  ],
+  "evidence": [
+    {
+      "type": "Research Note",
+      "title": "Weekly street sweeping program basics",
+      "source": "User research notes",
+      "status": "Needs source link",
+      "tags": ["schedule", "parking", "enforcement"]
+    }
+  ],
+  "tasks": [
+    "Find and attach official city street sweeping map link.",
+    "Confirm latest enforcement start date.",
+    "Track signage correction status.",
+    "Prepare next public-facing update."
+  ]
+}
