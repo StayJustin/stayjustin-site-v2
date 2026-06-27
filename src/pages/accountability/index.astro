@@ -1,0 +1,51 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const title = "Accountability Tracker | StayJustIn";
+const description = "Follow ongoing West Covina issues, unanswered questions, public decisions, and resident concerns being tracked by StayJustIn.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/accountability/"
+>
+  <section class="news-hero">
+    <div class="container">
+      <span class="eyebrow">StayJustIn Accountability</span>
+      <h1>Follow the Issues That Need Answers</h1>
+      <p>
+        Ongoing West Covina issues, public questions, documents, timelines,
+        and follow-up items in one place.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header clean-header">
+        <div>
+          <h2 class="section-title">Active Accountability Hubs</h2>
+          <p class="section-sub">
+            These are living issue pages, not one-time articles.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="story-tag">Active Issue</span>
+          <h3>
+            <a href="/accountability/street-sweeping/">
+              Street Sweeping, Parking, Signs, and Enforcement
+            </a>
+          </h3>
+          <p>
+            Track what changed, when enforcement begins, what residents still
+            need clarified, and which questions remain unanswered.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</MainLayout>
