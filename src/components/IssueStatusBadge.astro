@@ -1,0 +1,60 @@
+---
+type IssueStatus = "monitoring" | "developing" | "urgent" | "resolved";
+
+interface Props {
+  status: IssueStatus;
+  label: string;
+}
+
+const { status, label } = Astro.props;
+
+const statusIcon = {
+  monitoring: "🟢",
+  developing: "🟡",
+  urgent: "🔴",
+  resolved: "⚫"
+}[status];
+---
+
+<span class={`issue-status issue-status-${status}`}>
+  <span aria-hidden="true">{statusIcon}</span>
+  {label}
+</span>
+
+<style>
+  .issue-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+  }
+
+  .issue-status-monitoring {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    color: #166534;
+  }
+
+  .issue-status-developing {
+    background: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+  }
+
+  .issue-status-urgent {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+  }
+
+  .issue-status-resolved {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    color: #374151;
+  }
+</style>
