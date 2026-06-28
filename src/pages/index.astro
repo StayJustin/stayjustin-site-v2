@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import IssueCard from "../components/IssueCard.astro";
+import { featuredIssue, issues } from "../data/issues";
 ---
 
 <MainLayout
@@ -20,21 +22,53 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   <section class="featured-section">
     <div class="container">
-      <article class="featured-card">
-        <span class="featured-badge">Featured Investigation</span>
-        <h2>
-          <a href="/development/del-norte-project-west-covina/">
-            Del Norte Project Approved: What West Covina Residents Need to Know
-          </a>
-        </h2>
-        <p>
-          232 homes, 1.45 acres of park land, nearly $1 million in park fees,
-          and major questions about Little League, traffic, and long-term city costs.
-        </p>
-        <a class="read-more" href="/development/del-norte-project-west-covina/">
-          Read the full Del Norte breakdown →
-        </a>
-      </article>
+      <div class="section-header clean-header">
+        <div>
+          <h2 class="section-title">Featured Issue</h2>
+          <p class="section-sub">
+            The issue residents are asking about right now.
+          </p>
+        </div>
+        <a class="view-all" href="/accountability/">View Accountability</a>
+      </div>
+
+      <IssueCard
+        title={featuredIssue.title}
+        emoji={featuredIssue.emoji}
+        status={featuredIssue.status}
+        statusLabel={featuredIssue.statusLabel}
+        summary={featuredIssue.summary}
+        href={featuredIssue.href}
+        lastUpdated={featuredIssue.lastUpdated}
+        featured
+      />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header clean-header">
+        <div>
+          <h2 class="section-title">Active Issues</h2>
+          <p class="section-sub">
+            Living topics StayJustIn is tracking beyond a single article.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-grid">
+        {issues.map((issue) => (
+          <IssueCard
+            title={issue.title}
+            emoji={issue.emoji}
+            status={issue.status}
+            statusLabel={issue.statusLabel}
+            summary={issue.summary}
+            href={issue.href}
+            lastUpdated={issue.lastUpdated}
+          />
+        ))}
+      </div>
     </div>
   </section>
 
