@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import ArticleStyles from "../../components/ArticleStyles.astro";
+import ArticleSummary from "../../components/ArticleSummary.astro";
 
 const title =
   "373 Homes, 1.2 Miles Apart: Has West Covina Studied the Combined Impact? | StayJustIn";
@@ -14,50 +14,47 @@ const description =
   description={description}
   canonical="https://www.stayjustin.com/development/del-norte-city-yard-combined-impact/"
 >
-  <ArticleStyles />  
-<section class="article-page">
-    <div class="container article-container">  <p class="page-kicker">Development Watch</p>
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Development Watch</p>
 
-  <h1>373 Homes, 1.2 Miles Apart: Has West Covina Studied the Combined Impact?</h1>
+      <h1>373 Homes, 1.2 Miles Apart: Has West Covina Studied the Combined Impact?</h1>
 
-  <p class="article-dek">
-    Residents have repeatedly asked whether the Del Norte project and the proposed City Yard redevelopment have been evaluated together.
-  </p>
+      <ArticleSummary text="Residents have repeatedly asked whether the Del Norte project and the proposed City Yard redevelopment have been evaluated together." />
 
-  <p><strong>Status:</strong> Developing Story</p>
+      <p><strong>Status:</strong> Developing Story</p>
 
-  <div class="info-box">
-    <h2>What We Know So Far</h2>
+      <div class="info-box">
+        <h2>What We Know So Far</h2>
 
-    <ul class="check-list">
-      <li>Del Norte proposes 232 homes</li>
-      <li>City Yard proposes approximately 141 homes</li>
-      <li>Combined total: 373 homes</li>
-      <li>The projects are roughly 1.2 miles apart</li>
-    </ul>
-  </div>
+        <ul class="check-list">
+          <li>Del Norte proposes 232 homes</li>
+          <li>City Yard proposes approximately 141 homes</li>
+          <li>Combined total: 373 homes</li>
+          <li>The projects are roughly 1.2 miles apart</li>
+        </ul>
+      </div>
 
-  <div class="info-box">
-    <h2>Questions Residents Are Asking</h2>
+      <div class="info-box">
+        <h2>Questions Residents Are Asking</h2>
 
-    <ul class="question-list">
-      <li>Have both projects been studied together?</li>
-      <li>What are the combined traffic impacts?</li>
-      <li>How could parks and public safety be affected?</li>
-      <li>What infrastructure upgrades may be needed?</li>
-    </ul>
-  </div>
+        <ul class="question-list">
+          <li>Have both projects been studied together?</li>
+          <li>What are the combined traffic impacts?</li>
+          <li>How could parks and public safety be affected?</li>
+          <li>What infrastructure upgrades may be needed?</li>
+        </ul>
+      </div>
 
-  <p>
-    StayJustIn is reviewing project documents, environmental reports,
-    and future council discussions to better understand the cumulative
-    impact of both developments.
-  </p>
+      <p>
+        StayJustIn is reviewing project documents, environmental reports,
+        and future council discussions to better understand the cumulative
+        impact of both developments.
+      </p>
 
-  <hr />
+      <hr />
 
-  <p><em>Full investigation coming soon.</em></p>
-
-</div>
-
-  </section></MainLayout>
+      <p><em>Full investigation coming soon.</em></p>
+    </div>
+  </section>
+</MainLayout>
