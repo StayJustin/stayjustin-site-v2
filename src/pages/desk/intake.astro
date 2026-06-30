@@ -1,0 +1,95 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const title = "Packet Intake | Just-In Desk";
+const description = "Agenda packet intake checklist for routing new documents into StayJustIn issue workspaces.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/desk/intake/"
+>
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Just-In Desk</p>
+      <h1>New Packet Intake</h1>
+
+      <p class="article-dek">
+        This is the manual MVP for processing agenda packets before automated PDF intake exists.
+        Use this checklist to route each item into the right issue workspace.
+      </p>
+
+      <section class="intake-box">
+        <h2>Packet Intake Checklist</h2>
+        <ol>
+          <li>Name the packet by meeting date and body, such as <strong>2026-07-07 City Council Packet</strong>.</li>
+          <li>List each agenda item that matters to residents.</li>
+          <li>Assign every item to one or more issues, such as Street Sweeping, Athens, Budget, or City Yard.</li>
+          <li>Copy key quotes, page numbers, dollar amounts, maps, deadlines, and staff recommendations into the issue evidence binder.</li>
+          <li>Add timeline events only when something changed.</li>
+          <li>Create tasks for anything that needs verification, public records, or follow-up coverage.</li>
+        </ol>
+      </section>
+
+      <section class="intake-box">
+        <h2>Issue Routing Template</h2>
+        <pre><code>Packet: YYYY-MM-DD City Council Packet
+Agenda Item:
+Issue(s):
+What changed:
+Resident impact:
+Money mentioned:
+Key quote:
+Page number:
+Needs verification:
+Follow-up task:
+Publish to:</code></pre>
+      </section>
+
+      <section class="intake-box">
+        <h2>Routing Rule</h2>
+        <p>
+          The packet is the inbox. The issue is the filing cabinet. If one agenda item affects
+          Street Sweeping and Budget, it belongs in both issue workspaces without duplicating the whole packet.
+        </p>
+      </section>
+
+      <p>
+        <a href="/desk/" class="desk-link">← Back to Desk</a>
+      </p>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .intake-box {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #f8fafc;
+  }
+
+  .intake-box h2 {
+    margin-top: 0;
+  }
+
+  .intake-box li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    padding: 1rem;
+    background: #111827;
+    color: #f9fafb;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .desk-link {
+    font-weight: 800;
+  }
+</style>

@@ -1,0 +1,28 @@
+{
+  "slug": "del-norte",
+  "title": "Del Norte Project",
+  "status": "Tracking",
+  "summary": "Tracking the approved Del Norte housing project, park land, field debate, fees, traffic, and long-term neighborhood impacts.",
+  "category": "Development",
+  "priority": "Medium",
+  "lastUpdated": "2026-06-27",
+  "hubUrl": "/development/del-norte-project-west-covina/",
+  "openQuestions": [
+    "How will the park fee be used?",
+    "What happens to field access and youth sports needs?",
+    "How will traffic and cumulative impacts be monitored after approval?"
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-01",
+      "label": "Project coverage active",
+      "note": "Existing articles should be connected into a future Del Norte issue hub."
+    }
+  ],
+  "evidence": [],
+  "tasks": [
+    "Create future Del Norte issue hub.",
+    "Connect existing Del Norte articles to issue data.",
+    "Add key planning documents and vote history."
+  ]
+}

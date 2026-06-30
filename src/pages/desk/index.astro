@@ -1,0 +1,157 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import streetSweeping from "../../data/issues/street-sweeping.json";
+import delNorte from "../../data/issues/del-norte.json";
+import athens from "../../data/issues/athens.json";
+
+const title = "Just-In Desk | StayJustIn";
+const description = "Internal StayJustIn workspace for tracking issues, evidence, timelines, tasks, and publishing workflows.";
+const issues = [streetSweeping, delNorte, athens];
+const activeIssues = issues.filter((issue) => issue.status === "Active").length;
+const totalTasks = issues.reduce((count, issue) => count + issue.tasks.length, 0);
+const totalOpenQuestions = issues.reduce((count, issue) => count + issue.openQuestions.length, 0);
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/desk/"
+>
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Just-In Desk</p>
+      <h1>Issue Intelligence Dashboard</h1>
+
+      <p class="article-dek">
+        A working desk for agenda packets, issue tracking, evidence, timelines,
+        tasks, and publishing notes before they become public StayJustIn updates.
+      </p>
+
+      <div class="desk-grid stats-grid">
+        <article class="desk-card">
+          <span class="desk-label">Active Issues</span>
+          <strong>{activeIssues}</strong>
+        </article>
+
+        <article class="desk-card">
+          <span class="desk-label">Tracked Issues</span>
+          <strong>{issues.length}</strong>
+        </article>
+
+        <article class="desk-card">
+          <span class="desk-label">Open Questions</span>
+          <strong>{totalOpenQuestions}</strong>
+        </article>
+
+        <article class="desk-card">
+          <span class="desk-label">Tasks</span>
+          <strong>{totalTasks}</strong>
+        </article>
+      </div>
+
+      <section class="desk-section">
+        <div class="desk-section-header">
+          <div>
+            <h2>Issue Workspaces</h2>
+            <p>Open an issue to see its timeline, evidence, questions, and tasks.</p>
+          </div>
+          <a href="/desk/intake/" class="desk-button">New Packet Intake</a>
+        </div>
+
+        <div class="desk-grid">
+          {issues.map((issue) => (
+            <article class="desk-card issue-card">
+              <span class="desk-label">{issue.category}</span>
+              <h3>{issue.title}</h3>
+              <p>{issue.summary}</p>
+              <div class="issue-meta">
+                <span>Status: {issue.status}</span>
+                <span>Priority: {issue.priority}</span>
+              </div>
+              <a href={`/desk/issues/${issue.slug}/`} class="desk-link">Open Workspace →</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="desk-section">
+        <h2>Today's Workflow</h2>
+        <ol class="workflow-list">
+          <li>Log the agenda packet.</li>
+          <li>Identify which issues appear in the packet.</li>
+          <li>Attach notes, quotes, documents, and tasks to each issue.</li>
+          <li>Update the public hub only with what residents need today.</li>
+          <li>Generate article, Substack, Facebook, or public comment drafts from the same issue record.</li>
+        </ol>
+      </section>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .desk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .stats-grid .desk-card strong {
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.25rem;
+  }
+
+  .desk-card {
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #f8fafc;
+  }
+
+  .desk-label {
+    display: inline-block;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .desk-section {
+    margin: 2.5rem 0;
+  }
+
+  .desk-section-header {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .issue-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .issue-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 1rem 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .desk-button,
+  .desk-link {
+    display: inline-block;
+    font-weight: 800;
+  }
+
+  .workflow-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+</style>
