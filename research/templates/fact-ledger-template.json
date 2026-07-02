@@ -1,0 +1,41 @@
+{
+  "documentTitle": "",
+  "sourceType": "",
+  "date": "",
+  "issueTags": [],
+  "facts": [
+    {
+      "fact": "",
+      "confidence": "confirmed | needs_follow_up | unverified",
+      "sourceLocation": "",
+      "notes": ""
+    }
+  ],
+  "money": [
+    {
+      "amount": "",
+      "description": "",
+      "sourceLocation": "",
+      "confidence": "confirmed | needs_follow_up | unverified",
+      "notes": ""
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "",
+      "date": "",
+      "bodyOrDepartment": "",
+      "voteOrAction": "",
+      "confidence": "confirmed | needs_follow_up | unverified",
+      "notes": ""
+    }
+  ],
+  "openQuestions": [
+    {
+      "question": "",
+      "whyItMatters": "",
+      "whoShouldAnswer": "",
+      "status": "open"
+    }
+  ]
+}
