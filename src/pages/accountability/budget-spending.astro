@@ -39,6 +39,26 @@ const description = "A living tracker for West Covina budget and spending questi
         ]}
       />
 
+      <section class="explainer-box">
+        <p class="explainer-kicker">Budget Watch Note</p>
+        <h2>Why I asked about the sewer charge</h2>
+        <p>
+          At the July 7 West Covina City Council meeting, I asked a question about the Citywide Sewer Service Charge. This was not because sewer reserves are automatically bad. Sewer systems are expensive, and cities do need money set aside for maintenance, emergencies, repairs, and future infrastructure work.
+        </p>
+        <p>
+          The reason I asked is because the staff report showed the sewer fund projected near $21 million, while also showing no major sewer capital improvement projects listed for FY 2026-27.
+        </p>
+        <p>
+          That raises a fair resident question: if the City is continuing to collect the sewer charge, what is the repair plan tied to that money?
+        </p>
+        <p>
+          The question is not simply why the City has reserves. The better question is what reserve level the City is targeting, what projects are being planned, and when residents will see a public sewer repair or upgrade schedule.
+        </p>
+        <p>
+          StayJustIn submitted the question to the City and will update this tracker if a response is provided.
+        </p>
+      </section>
+
       <WhatWeKnow
         items={[
           "StayJustIn submitted written questions to the City on July 7, 2026 regarding the Citywide Sewer Service Charge and the sewer fund reserve.",
@@ -117,3 +137,36 @@ const description = "A living tracker for West Covina budget and spending questi
     </div>
   </section>
 </MainLayout>
+
+<style>
+  .explainer-box {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #111827;
+    border-radius: 0.85rem;
+    background: #f8fafc;
+  }
+
+  .explainer-kicker {
+    margin: 0 0 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4b5563;
+  }
+
+  .explainer-box h2 {
+    margin: 0 0 1rem;
+  }
+
+  .explainer-box p {
+    margin: 0 0 1rem;
+    line-height: 1.7;
+  }
+
+  .explainer-box p:last-child {
+    margin-bottom: 0;
+  }
+</style>
