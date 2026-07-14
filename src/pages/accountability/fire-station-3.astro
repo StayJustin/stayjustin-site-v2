@@ -1,0 +1,125 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleSummary from "../../components/ArticleSummary.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import WhyThisMatters from "../../components/WhyThisMatters.astro";
+import WhatWeKnow from "../../components/WhatWeKnow.astro";
+import WhatWeDontKnow from "../../components/WhatWeDontKnow.astro";
+import QuestionsResidentsShouldAsk from "../../components/QuestionsResidentsShouldAsk.astro";
+import AccountabilityTracker from "../../components/AccountabilityTracker.astro";
+import RelatedCoverage from "../../components/RelatedCoverage.astro";
+
+const title = "Fire Station 3 Emergency Repairs Tracker | StayJustIn";
+const description = "A living tracker for West Covina Fire Station 3 emergency repairs, costs, temporary firefighter arrangements, remaining work, and the condition required to end emergency action.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/accountability/fire-station-3/"
+>
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Accountability Hub</p>
+
+      <h1>Fire Station 3 Emergency Repairs Tracker</h1>
+
+      <ArticleMetadata
+        category="Public Safety / Emergency Repairs"
+        updated="Questions submitted July 7, 2026 | Awaiting City response"
+      />
+
+      <ArticleSummary text="StayJustIn is tracking West Covina's ongoing Fire Station 3 emergency repair action, including total approved cost, spending to date, remaining repair scope, temporary firefighter arrangements, and what condition must be met before the emergency action ends." />
+
+      <WhyThisMatters
+        items={[
+          "Fire station repairs affect firefighter health, public safety response, and city spending.",
+          "Emergency action can bypass normal competitive bidding, so residents need clear cost, timeline, and scope updates.",
+          "The public should know what has been fixed, what remains unfinished, and when the emergency status will end."
+        ]}
+      />
+
+      <WhatWeKnow
+        items={[
+          "The City has continued to bring Fire Station 3 emergency repairs back to Council for review.",
+          "The emergency action was connected to conditions requiring immediate repair work at Fire Station 3.",
+          "StayJustIn submitted written questions to the City on July 7, 2026 regarding cost, spending to date, remaining work, temporary arrangements, and the end condition for the emergency action.",
+          "The issue remains active because residents still need a plain-English cost and completion update."
+        ]}
+      />
+
+      <WhatWeDontKnow
+        items={[
+          "The total approved cost for the Fire Station 3 emergency repair work has not yet been confirmed to StayJustIn.",
+          "The amount spent to date has not yet been confirmed to StayJustIn.",
+          "The remaining scope of work and estimated completion date still need a clear public update.",
+          "The cost and details of temporary firefighter arrangements have not yet been confirmed to StayJustIn.",
+          "The specific condition required to end the emergency action still needs to be stated clearly."
+        ]}
+      />
+
+      <QuestionsResidentsShouldAsk
+        questions={[
+          "What is the total approved cost for Fire Station 3 emergency repairs?",
+          "How much has been spent to date?",
+          "What work is complete, what work remains, and when is completion expected?",
+          "What temporary arrangements are being used for firefighters, and what do they cost?",
+          "What specific condition must be met before the City ends the emergency action?",
+          "When will the City return this work to normal procurement and reporting procedures?"
+        ]}
+      />
+
+      <AccountabilityTracker
+        title="Fire Station 3 Follow-Up Tracker"
+        items={[
+          {
+            question: "Has the City confirmed the total approved repair cost?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City confirmed the amount spent to date?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City described what work is finished and what work remains?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City explained temporary firefighter arrangements and related costs?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City stated the condition required to end the emergency action?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          }
+        ]}
+      />
+
+      <RelatedCoverage
+        title="Related Accountability Coverage"
+        items={[
+          {
+            title: "Budget & Spending Watch",
+            href: "/accountability/budget-spending/",
+            description: "Follow related questions involving emergency spending, city reserves, contracts, and public-facing cost updates."
+          },
+          {
+            title: "City Hall Watch",
+            href: "/city-hall/",
+            description: "Track public meetings, city decisions, staff reports, contracts, and public follow-up questions."
+          },
+          {
+            title: "Accountability Tracker",
+            href: "/accountability/",
+            description: "Return to the active issue tracker for West Covina questions still awaiting answers."
+          }
+        ]}
+      />
+    </div>
+  </section>
+</MainLayout>
