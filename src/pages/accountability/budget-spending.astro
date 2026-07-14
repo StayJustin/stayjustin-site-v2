@@ -1,0 +1,119 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleSummary from "../../components/ArticleSummary.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import WhyThisMatters from "../../components/WhyThisMatters.astro";
+import WhatWeKnow from "../../components/WhatWeKnow.astro";
+import WhatWeDontKnow from "../../components/WhatWeDontKnow.astro";
+import QuestionsResidentsShouldAsk from "../../components/QuestionsResidentsShouldAsk.astro";
+import AccountabilityTracker from "../../components/AccountabilityTracker.astro";
+import RelatedCoverage from "../../components/RelatedCoverage.astro";
+
+const title = "Budget & Spending Watch | StayJustIn";
+const description = "A living tracker for West Covina budget and spending questions, including sewer reserves, capital planning, budget amendments, grants, contracts, emergency spending, and city funds.";
+---
+
+<MainLayout
+  title={title}
+  description={description}
+  canonical="https://www.stayjustin.com/accountability/budget-spending/"
+>
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Accountability Hub</p>
+
+      <h1>Budget & Spending Watch</h1>
+
+      <ArticleMetadata
+        category="Budget / Public Spending"
+        updated="Questions submitted July 7, 2026 | Awaiting City response"
+      />
+
+      <ArticleSummary text="StayJustIn's Budget & Spending Watch tracks major West Covina funds, reserves, contracts, grants, emergency spending, assessment districts, and the plain-English questions residents should be able to ask before money moves." />
+
+      <WhyThisMatters
+        items={[
+          "City spending decisions affect services, infrastructure, fees, reserves, and long-term obligations.",
+          "Residents should be able to understand where money is building up, where projects are delayed, and what public benefit is expected.",
+          "A living tracker helps connect budget numbers to real-world issues like sewer infrastructure, fire station repairs, street sweeping, grants, and contracts."
+        ]}
+      />
+
+      <WhatWeKnow
+        items={[
+          "StayJustIn submitted written questions to the City on July 7, 2026 regarding the Citywide Sewer Service Charge and the sewer fund reserve.",
+          "The question currently being tracked is why the sewer fund is projected near $21 million while no major sewer capital improvement projects were listed for FY 2026-27.",
+          "This page will also track related public spending questions involving emergency repairs, budget amendments, grants, contracts, assessment districts, and service costs.",
+          "StayJustIn is treating this as an ongoing accountability file rather than a one-time article."
+        ]}
+      />
+
+      <WhatWeDontKnow
+        items={[
+          "The City's target reserve level for the sewer fund has not yet been confirmed to StayJustIn.",
+          "The public sewer repair or upgrade plan tied to the projected reserve has not yet been confirmed to StayJustIn.",
+          "It is not yet clear when future sewer capital projects are expected or why none were listed for FY 2026-27.",
+          "Related spending questions involving Fire Station 3, street sweeping implementation, grants, and contracts will be added as records are reviewed."
+        ]}
+      />
+
+      <QuestionsResidentsShouldAsk
+        questions={[
+          "What is the City's target reserve level for the sewer fund?",
+          "Why are no major sewer capital improvement projects listed for FY 2026-27 if the fund is projected near $21 million?",
+          "Will the City provide residents with a sewer repair or upgrade plan showing future work?",
+          "Which funds are restricted, which are flexible, and which can only be used for specific purposes?",
+          "How are emergency repairs, grants, contracts, and assessment districts reported back to residents after approval?",
+          "What public dashboard or recurring report could help residents track spending after Council votes?"
+        ]}
+      />
+
+      <AccountabilityTracker
+        title="Budget & Spending Follow-Up Tracker"
+        items={[
+          {
+            question: "Has the City confirmed the target sewer fund reserve level?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City explained why no major sewer capital projects were listed for FY 2026-27?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City provided a public sewer repair or upgrade plan?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
+          },
+          {
+            question: "Has the City connected major spending items to plain-English resident impact?",
+            status: "pending",
+            note: "Ongoing tracker item for budget amendments, contracts, grants, emergency spending, and assessment districts."
+          }
+        ]}
+      />
+
+      <RelatedCoverage
+        title="Related Accountability Coverage"
+        items={[
+          {
+            title: "Fire Station 3 Emergency Repairs Tracker",
+            href: "/accountability/fire-station-3/",
+            description: "Track emergency repair costs, spending to date, remaining work, and the condition required to end emergency action."
+          },
+          {
+            title: "Street Sweeping Enforcement Tracker",
+            href: "/accountability/street-sweeping/",
+            description: "Track enforcement timing, corrected maps, signs, warning cycles, and resident concerns."
+          },
+          {
+            title: "City Hall Watch",
+            href: "/city-hall/",
+            description: "Track public meetings, budget decisions, staff reports, contracts, and public follow-up questions."
+          }
+        ]}
+      />
+    </div>
+  </section>
+</MainLayout>
