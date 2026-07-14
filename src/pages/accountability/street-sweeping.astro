@@ -10,8 +10,8 @@ import AccountabilityTracker from "../../components/AccountabilityTracker.astro"
 import CommunityFeedback from "../../components/CommunityFeedback.astro";
 import RelatedCoverage from "../../components/RelatedCoverage.astro";
 
-const title = "Street Sweeping Accountability Hub | StayJustIn";
-const description = "A living tracker for West Covina street sweeping concerns, parking signs, enforcement timing, warnings, tickets, and resident questions.";
+const title = "Street Sweeping Enforcement Tracker | StayJustIn";
+const description = "A living tracker for West Covina street sweeping enforcement, corrected signs, final maps, alternate-side streets, warning periods, citations, and City responses.";
 ---
 
 <MainLayout
@@ -23,54 +23,51 @@ const description = "A living tracker for West Covina street sweeping concerns, 
     <div class="container article-container">
       <p class="page-kicker">Accountability Hub</p>
 
-      <h1>Street Sweeping, Parking, Signs, and Enforcement</h1>
+      <h1>Street Sweeping Enforcement Tracker</h1>
 
       <ArticleMetadata
         category="Accountability Tracker"
-        updated="Developing issue"
+        updated="Questions submitted July 7, 2026 | Awaiting City response"
       />
 
-      <ArticleSummary text="This hub tracks West Covina street sweeping questions involving the weekly sweeping program, parking restriction windows, enforcement timing, signage, warnings, possible tickets, and what residents need to know before penalties begin." />
+      <ArticleSummary text="StayJustIn is tracking West Covina street sweeping enforcement, corrected signs, final maps, alternate-side streets, warning periods, citation timing, and whether residents receive clear notice before tickets begin." />
 
       <WhyThisMatters
         items={[
-          "Street sweeping affects residents across the city, including people with limited parking options.",
-          "Confusing signs or unclear enforcement dates can quickly turn a city service into a resident penalty issue.",
-          "A permanent hub makes it easier to track updates without burying residents in scattered articles."
+          "Street sweeping affects residents across the city, especially neighborhoods with limited parking.",
+          "Missing, outdated, or incorrect signs can turn a city service into an unfair citation problem.",
+          "Residents need clear maps, corrected signs, and a warning period before paid enforcement begins."
         ]}
       />
 
       <WhatWeKnow
         items={[
-          "City program materials indicate West Covina moved to a City Council-approved weekly street sweeping schedule.",
-          "The weekly program reportedly began January 6, 2025.",
-          "The schedule was designed to align with residential trash collection days for consistency.",
-          "The city has referenced a weekly street sweeping schedule map through its West Covina Resource Maps section.",
-          "The program includes 4-hour parking restriction windows.",
-          "High-density residential streets may use alternating sweeping days to help address parking limitations.",
-          "Residents seeking new parking restrictions must submit a Parking Restriction application to the Engineering Division, followed by a resident postcard survey and Traffic Committee review."
+          "Residents raised concerns at the July 7, 2026 City Council meeting about missing signs, incorrect-day postings, outdated signs, alternate-side sweeping requests, school-zone conflicts, and parking hardship.",
+          "StayJustIn submitted written questions to the City on July 7, 2026 regarding enforcement timing, corrected maps, signage updates, alternate-side streets, warning cycles, public concern logs, and citation amounts.",
+          "City staff materials indicated that resident concerns were reviewed and that enforcement should not begin until signage and routes are updated.",
+          "The street sweeping issue remains active because residents still need a clear public enforcement timeline and final corrected map."
         ]}
       />
 
       <WhatWeDontKnow
         items={[
-          "The exact citation enforcement timeline still needs to be clearly confirmed in a simple public-facing way.",
-          "It is not yet clear how warnings, grace periods, or first-time violations will be handled citywide.",
-          "Residents still need an easy way to confirm which streets, days, and parking restrictions apply to their homes.",
-          "StayJustIn still needs to attach or verify the original city source pages, maps, staff reports, or public documents supporting each program detail.",
-          "It is not yet clear which signs are missing, outdated, improper, or scheduled for correction before enforcement."
+          "The exact date street sweeping citations will begin has not yet been confirmed to StayJustIn.",
+          "The final corrected map and list of streets changed to alternate-side sweeping have not yet been provided to StayJustIn.",
+          "It is not yet clear whether residents will receive one full warning cycle after corrected signs and maps are finalized.",
+          "The full count of signs that were missing, incorrect, outdated, replaced, moved, or added still needs a public-facing summary.",
+          "It is not yet clear whether the City will release the concern log showing what was reviewed and what changed."
         ]}
       />
 
       <QuestionsResidentsShouldAsk
         questions={[
-          "What is the official enforcement start date?",
-          "Will residents receive warnings before citations are issued?",
-          "Which streets are moving to different or alternating sweeping schedules?",
-          "How will the City fix missing, outdated, unclear, or conflicting signs before enforcement?",
-          "Where should residents park when both parking supply and sweeping restrictions collide?",
-          "Will the City publish a simple map or searchable street list?",
-          "Where can residents find the official city map, application forms, staff reports, and enforcement updates?"
+          "What exact date will street sweeping citations begin?",
+          "Will the final corrected map be posted before tickets start?",
+          "Which streets are being changed to alternate-side sweeping?",
+          "How many signs were missing, wrong, outdated, replaced, moved, or added?",
+          "Will residents receive at least one full warning cycle after corrected signs are installed?",
+          "Will the City make the resident concern log available to the public?",
+          "How much will each citation be?"
         ]}
       />
 
@@ -80,27 +77,27 @@ const description = "A living tracker for West Covina street sweeping concerns, 
           {
             question: "Has the City clearly announced when citations will begin?",
             status: "pending",
-            note: "This is the main question residents need answered before enforcement begins."
+            note: "Question submitted July 7, 2026. Awaiting City response."
           },
           {
-            question: "Has the City published a street-by-street map or searchable schedule?",
+            question: "Has the City published the final corrected street sweeping map?",
             status: "pending",
-            note: "City materials reference a weekly street sweeping map, but StayJustIn still needs to verify and link the official public source."
+            note: "Question submitted July 7, 2026. Awaiting City response."
           },
           {
-            question: "Has the City explained how warning notices will work before tickets?",
+            question: "Has the City released the list of streets changed to alternate-side sweeping?",
             status: "pending",
-            note: "Residents need to know whether there will be a grace period or warning process."
+            note: "Question submitted July 7, 2026. Awaiting City response."
           },
           {
-            question: "Has the City identified and corrected missing, old, or improper signs?",
+            question: "Will residents get one full warning cycle after corrected signs and maps are finalized?",
             status: "pending",
-            note: "Signage needs to be clear before enforcement is fair."
+            note: "Question submitted July 7, 2026. Awaiting City response."
           },
           {
-            question: "Has the City explained how residents can request parking restriction changes?",
-            status: "answered",
-            note: "Program materials describe an Engineering Division application, resident postcard survey, majority approval, and Traffic Committee review process. StayJustIn still needs to attach the official source link."
+            question: "Will the City release the concern log showing what was reviewed and changed?",
+            status: "pending",
+            note: "Question submitted July 7, 2026. Awaiting City response."
           }
         ]}
       />
@@ -116,9 +113,9 @@ const description = "A living tracker for West Covina street sweeping concerns, 
             description: "The original developing story explaining resident concerns about parking, signs, warnings, and possible tickets."
           },
           {
-            title: "Neighborhood Impact",
-            href: "/neighborhood-impact/",
-            description: "Follow daily-life issues affecting streets, parking, neighborhoods, and city services."
+            title: "Budget & Spending Watch",
+            href: "/accountability/budget-spending/",
+            description: "Follow related spending questions involving signage, enforcement, equipment, and city funds."
           },
           {
             title: "City Hall Watch",
