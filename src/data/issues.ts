@@ -15,48 +15,37 @@ export interface Issue {
 export const issues: Issue[] = [
   {
     slug: "street-sweeping",
-    title: "Street Sweeping",
+    title: "Street Sweeping Enforcement",
     emoji: "🚧",
     status: "developing",
-    statusLabel: "Developing",
-    lastUpdated: "June 27, 2026",
+    statusLabel: "Awaiting City Response",
+    lastUpdated: "July 7, 2026",
     summary:
-      "Tracking enforcement timing, parking signs, warnings, possible citations, and what residents need to know before penalties begin.",
+      "Tracking corrected signs, final maps, alternate-side streets, warning periods, citation timing, and whether residents receive clear notice before enforcement begins.",
     href: "/accountability/street-sweeping/",
     featured: true
   },
   {
-    slug: "del-norte",
-    title: "Del Norte Project",
-    emoji: "🏗️",
-    status: "monitoring",
-    statusLabel: "Monitoring",
-    lastUpdated: "June 2026",
-    summary:
-      "Following the approved housing project, park land dedication, traffic concerns, field questions, and long-term neighborhood impacts.",
-    href: "/development/del-norte-project-west-covina/"
-  },
-  {
-    slug: "city-yard",
-    title: "City Yard / Brandywine",
-    emoji: "🏢",
+    slug: "fire-station-3",
+    title: "Fire Station 3 Emergency Repairs",
+    emoji: "🚒",
     status: "developing",
-    statusLabel: "Developing",
-    lastUpdated: "June 2026",
+    statusLabel: "Awaiting Cost and Scope Update",
+    lastUpdated: "July 7, 2026",
     summary:
-      "Tracking public land, Fire Station 1 funding, housing plans, Surplus Land Act questions, and future City Council action.",
-    href: "/development/west-covina-city-yard-brandywine/"
+      "Tracking emergency repair authority, total approved cost, amount spent to date, remaining work, temporary firefighter arrangements, and what condition ends the emergency action.",
+    href: "/accountability/fire-station-3/"
   },
   {
-    slug: "athens",
-    title: "Athens Services Contract",
-    emoji: "🗑️",
+    slug: "budget-spending",
+    title: "Budget & Spending Watch",
+    emoji: "📊",
     status: "monitoring",
-    statusLabel: "Monitoring",
-    lastUpdated: "June 2026",
+    statusLabel: "Awaiting Clarification",
+    lastUpdated: "July 7, 2026",
     summary:
-      "Following West Covina's long-term trash agreement, rate impacts, contract extensions, and city leverage through 2048.",
-    href: "/city-hall/athens-services-west-covina-trash-contract-rate-increases-2048/"
+      "Tracking sewer fund reserves, public repair planning, budget amendments, contracts, grants, emergency spending, and major city funds residents should understand.",
+    href: "/accountability/budget-spending/"
   }
 ];
 
