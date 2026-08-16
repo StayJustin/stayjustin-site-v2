@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import IssueCard from "../components/IssueCard.astro";
+import WhatToWatch from "../components/WhatToWatch.astro";
 import { featuredIssue, issues } from "../data/issues";
 ---
 
@@ -19,6 +20,8 @@ import { featuredIssue, issues } from "../data/issues";
       </p>
     </div>
   </section>
+
+  <WhatToWatch />
 
   <section class="featured-section">
     <div class="container">
