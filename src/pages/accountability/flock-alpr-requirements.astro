@@ -1,0 +1,64 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleSummary from "../../components/ArticleSummary.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import WhyThisMatters from "../../components/WhyThisMatters.astro";
+import WhatWeKnow from "../../components/WhatWeKnow.astro";
+import WhatWeDontKnow from "../../components/WhatWeDontKnow.astro";
+import QuestionsResidentsShouldAsk from "../../components/QuestionsResidentsShouldAsk.astro";
+import AccountabilityTracker from "../../components/AccountabilityTracker.astro";
+
+const title = "Flock ALPR Requirements Tracker | StayJustIn";
+const description = "Tracking when West Covina requires private businesses to install Flock license plate recognition cameras integrated with the Police Department.";
+---
+
+<MainLayout title={title} description={description} canonical="https://www.stayjustin.com/accountability/flock-alpr-requirements/">
+  <section class="article-page">
+    <div class="container article-container">
+      <p class="page-kicker">Accountability Hub</p>
+      <h1>Flock ALPR: What Standard Is the City Applying?</h1>
+
+      <ArticleMetadata category="Accountability Tracker" updated="Updated September 26, 2026 | City standard under review" />
+
+      <ArticleSummary text="StayJustIn is tracking when West Covina requires private businesses to install Flock license plate recognition cameras integrated with the Police Department, and whether the City has a consistent public standard for imposing that condition." />
+
+      <WhyThisMatters items={[
+        "A condition requiring license plate recognition is different from ordinary security-camera coverage because it connects vehicle-identifying data to a police system.",
+        "Residents and businesses should be able to understand what objective standard determines when that requirement is imposed.",
+        "Consistent permit conditions make it easier to evaluate privacy, public-safety, retention, access, and data-sharing questions."
+      ]} />
+
+      <WhatWeKnow items={[
+        "For the 1209 S. Sunset Avenue Chevron Extra Mile project, the approval language requires a Flock Safety camera with license plate recognition integrated with the Police Department's system at every vehicle entry/exit point for the site.",
+        "A separate alcohol-related Conditional Use Permit for the Circle K/76 site at 1200 S. Glendora Avenue was considered by the Planning Commission on August 25, 2026.",
+        "StayJustIn is reviewing the final August 25 conditions to document whether Flock-specific language was removed or replaced with a broader surveillance requirement before treating the two approvals as directly comparable."
+      ]} />
+
+      <WhatWeDontKnow items={[
+        "Whether West Covina has a written citywide policy establishing when Flock ALPR may be required as a condition of an alcohol-related permit.",
+        "What objective criteria distinguish a site that receives a Flock-specific condition from one that receives general surveillance requirements.",
+        "Whether a privately installed Flock camera required through a permit becomes a new source of ALPR data available to the Police Department.",
+        "Who owns the cameras and resulting data, how long data is retained, who may search it, and what sharing rules apply to permit-required installations.",
+        "Whether the Flock condition remains in effect for the life of the alcohol authorization or can later be modified or removed."
+      ]} />
+
+      <QuestionsResidentsShouldAsk questions={[
+        "What objective standard determines when the City requires Flock ALPR?",
+        "Is there a written City policy governing Flock requirements in alcohol-related CUPs?",
+        "Is a permit-required camera connected to the City's existing Flock system?",
+        "Who owns and controls the resulting ALPR data?",
+        "How long is the data retained, who can search it, and under what circumstances?",
+        "Can the data be shared with other agencies or third parties?",
+        "Why is police-integrated ALPR necessary for a particular site instead of standard surveillance cameras?",
+        "Is the requirement permanent, or does it end if the alcohol authorization ends?"
+      ]} />
+
+      <AccountabilityTracker title="Flock ALPR Follow-Up Tracker" items={[
+        { question: "Has the City identified a written standard for when Flock ALPR is required?", status: "pending", note: "StayJustIn is seeking the policy basis and decision criteria." },
+        { question: "Do the final Circle K/76 conditions remove Flock-specific language?", status: "pending", note: "Final August 25, 2026 conditions should be verified before making a direct comparison." },
+        { question: "Has the City explained ownership, access, retention, and sharing for permit-required cameras?", status: "pending", note: "These operational details remain part of the follow-up." },
+        { question: "Has the City explained why ALPR is necessary instead of ordinary surveillance at affected sites?", status: "pending", note: "The goal is to document the public-safety basis for the condition." }
+      ]} />
+    </div>
+  </section>
+</MainLayout>
