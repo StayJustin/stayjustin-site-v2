@@ -1,4 +1,5 @@
 ---
+import RecordUpdate from "../../components/RecordUpdate.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ArticleSummary from "../../components/ArticleSummary.astro";
 import ArticleMetadata from "../../components/ArticleMetadata.astro";
@@ -24,6 +25,8 @@ const description = "A developing breakdown of West Covina street sweeping conce
       <p class="page-kicker">Neighborhood Impact</p>
 
       <h1>Why Street Sweeping Has Residents Showing Up to City Hall</h1>
+
+      <RecordUpdate title="October update: enforcement paused; Phase II signs still ahead" paragraphs={["The City’s current notice says no street-sweeping warnings or citations will be issued during the route transition. This was checked October 23; it is not a suspension of other parking restrictions.", "The CIP lists Phase I signage complete and Phase II upcoming. Follow-up reporting now focuses on the cost and scope of each phase, corrections, final maps, and notice before enforcement resumes."]} href="/city-hall/street-sweeping-phase-one-phase-two-october-2026/" />
 
       <ArticleMetadata
         category="Neighborhood Impact"

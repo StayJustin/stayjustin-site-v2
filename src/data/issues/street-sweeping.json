@@ -2,10 +2,10 @@
   "slug": "street-sweeping",
   "title": "Street Sweeping",
   "status": "Active",
-  "summary": "Tracking West Covina street sweeping, parking restrictions, signs, enforcement timing, warnings, and resident questions.",
+  "summary": "City notice confirms warnings and citations suspended during transition. CIP identifies completed Phase I and upcoming Phase II signage.",
   "category": "Neighborhood Impact",
   "priority": "High",
-  "lastUpdated": "2026-06-27",
+  "lastUpdated": "2026-10-23",
   "hubUrl": "/accountability/street-sweeping/",
   "openQuestions": [
     "When does citation enforcement officially begin?",
@@ -23,6 +23,11 @@
       "date": "2026-06-16",
       "label": "Council discussed delaying citations",
       "note": "Follow-up report and clear enforcement timing still need tracking."
+    },
+    {
+      "date": "2026-10-23",
+      "label": "October CIP and current City service notice reviewed",
+      "note": "Phase I complete in November 2025; Phase II upcoming. Warnings and citations suspended during route reevaluation."
     }
   ],
   "evidence": [
@@ -31,7 +36,22 @@
       "title": "Weekly street sweeping program basics",
       "source": "User research notes",
       "status": "Needs source link",
-      "tags": ["schedule", "parking", "enforcement"]
+      "tags": [
+        "schedule",
+        "parking",
+        "enforcement"
+      ]
+    },
+    {
+      "type": "Official City notice",
+      "title": "Street Sweeping \u2014 transition and parking enforcement",
+      "source": "https://www.westcovina.gov/517/Street-Sweeping",
+      "status": "Reviewed October 23, 2026",
+      "tags": [
+        "enforcement",
+        "signage",
+        "routes"
+      ]
     }
   ],
   "tasks": [

@@ -1,0 +1,55 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import { octoberStories, agendaUrl, sourcePdf, reviewedDate } from "../../data/october2026";
+
+export function getStaticPaths() {
+  return octoberStories.map((story) => ({ params: { octoberStory: story.slug }, props: { story } }));
+}
+const { story } = Astro.props;
+---
+<MainLayout title={`${story.title} | StayJustIn`} description={story.summary} canonical={`https://www.stayjustin.com/city-hall/${story.slug}/`}>
+  <section class="section">
+    <div class="container">
+      <article class="october-article">
+        <a class="back-link" href="/city-hall/october-20-2026-agenda-report/">← October 20 coverage</a>
+        <p class="page-kicker">{story.category}</p>
+        <h1>{story.title}</h1>
+        <ArticleMetadata category="Document-based reporting" published={reviewedDate} author="StayJustIn" />
+        <p class="dek">{story.summary}</p>
+        <aside class="record-note"><strong>Evidence status:</strong> {story.status}. This article distinguishes what the records say from questions still requiring answers.</aside>
+        {story.sections.map((section) => (
+          <section>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </section>
+        ))}
+        <section class="follow-up">
+          <h2>Questions to follow up</h2>
+          <p>These are reporting questions, not allegations or a claim that a request has already been submitted.</p>
+          <ul>{story.questions.map((question) => <li>{question}</li>)}</ul>
+        </section>
+        <section class="sources" aria-label="Source records">
+          <h2>Read the records</h2>
+          <p>Reviewed October 23, 2026. The source excerpts preserve selected pages of the supplied October 20 agenda packet. They are staff reports, draft agreements, and project updates—not minutes confirming the meeting’s decisions.</p>
+          <ul>
+            {story.sourcePages.map((source) => <li><a href={`${sourcePdf}#page=${source.page}`}>{source.label} — PDF excerpt</a></li>)}
+            <li><a href={agendaUrl}>Official October 20, 2026 City Council agenda</a></li>
+          </ul>
+        </section>
+        {story.related && <section><h2>Related coverage and resources</h2><ul>{story.related.map((link) => <li><a href={link.href}>{link.title}</a></li>)}</ul></section>}
+        <p class="corrections">Have a record that answers one of these questions? <a href="/contact/">Send StayJustIn a source or correction.</a></p>
+      </article>
+    </div>
+  </section>
+</MainLayout>
+<style>
+  .october-article { max-width: 850px; margin: 0 auto; padding: clamp(22px, 4vw, 48px); }
+  .dek { font-size: 1.18rem; line-height: 1.7; }
+  .record-note { padding: 18px 20px; background: #f4ebd0; border-left: 4px solid #d9a441; color: #10243e; line-height: 1.65; border-radius: 4px; }
+  .follow-up, .sources { border-top: 1px solid #dbe1e8; margin-top: 30px; padding-top: 5px; }
+  .sources p, .corrections { font-size: .94rem; }
+  a { overflow-wrap: anywhere; }
+  li { line-height: 1.65; }
+  .back-link { display: inline-block; margin-bottom: 20px; font-weight: 700; }
+</style>

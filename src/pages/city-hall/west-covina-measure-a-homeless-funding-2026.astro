@@ -1,4 +1,5 @@
 ---
+import RecordUpdate from "../../components/RecordUpdate.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ArticleSummary from "../../components/ArticleSummary.astro";
 import ArticleMetadata from "../../components/ArticleMetadata.astro";
@@ -24,6 +25,8 @@ const description = "A StayJustIn breakdown of West Covina's Measure A Local Sol
       <p class="page-kicker">City Hall Watch</p>
 
       <h1>West Covina’s Measure A Homeless Funding: What Was Allocated, What Was Spent, and What Residents Still Need Answered</h1>
+
+      <RecordUpdate title="Do not confuse the two Measure A programs" paragraphs={["The October playground reports identify Los Angeles County RPOSD’s 2016 parks Measure A and Fund 236. That is separate from the homelessness Measure A Local Solutions Funding discussed in this article.", "The new park grants do not answer this article’s earlier homelessness allocation or spending questions. The August agenda discussion below is historical coverage, not notice of an upcoming meeting."]} href="/city-hall/galster-woodgrove-playground-funding-october-2026/" />
 
       <ArticleMetadata
         category="Measure A / Homeless Services"

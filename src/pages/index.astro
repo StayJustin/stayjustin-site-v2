@@ -1,4 +1,5 @@
 ---
+import OctoberCoverage from "../components/OctoberCoverage.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import IssueCard from "../components/IssueCard.astro";
 import WhatToWatch from "../components/WhatToWatch.astro";
@@ -22,6 +23,8 @@ import { featuredIssue, issues } from "../data/issues";
   </section>
 
   <WhatToWatch />
+
+  <OctoberCoverage compact />
 
   <section class="featured-section">
     <div class="container">

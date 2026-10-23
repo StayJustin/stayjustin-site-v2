@@ -1,0 +1,25 @@
+---
+import { octoberStories } from "../data/october2026";
+const { compact = false } = Astro.props;
+const stories = compact ? octoberStories.slice(0, 4) : octoberStories;
+---
+<section class="section october-coverage" aria-label="October 20 coverage">
+  <div class="container">
+    <div class="section-header clean-header">
+      <div>
+        <p class="page-kicker">Updated October 23, 2026</p>
+        <h2 class="section-title">New records. Clearer answers. Questions to follow.</h2>
+        <p class="section-sub">October 20 agenda coverage: funding holds, neighborhood services, public spending, and progress.</p>
+      </div>
+      <a class="view-all" href="/city-hall/october-20-2026-agenda-report/">Read the full briefing →</a>
+    </div>
+    <div class="story-grid">
+      {stories.map((story) => <article class="story-card">
+        <span class="story-tag">{story.category}</span>
+        <h3><a href={`/city-hall/${story.slug}/`}>{story.title}</a></h3>
+        <p>{story.summary}</p>
+        <a class="read-more-link" href={`/city-hall/${story.slug}/`}>Read the records and follow-up questions →</a>
+      </article>)}
+    </div>
+  </div>
+</section>

@@ -13,17 +13,18 @@ export interface Issue {
 }
 
 export const issues: Issue[] = [
+  { slug: "fire-station-1", title: "Fire Station 1 Replacement Funding", emoji: "🚒", status: "developing", statusLabel: "Design on Hold — City CIP", lastUpdated: "October 23, 2026", summary: "The October CIP reports a design hold pending funds. Track available funding, prior allocations, the Civic Center location, and the remaining cost.", href: "/city-hall/fire-station-1-design-funding-october-2026/", featured: true },
   {
     slug: "street-sweeping",
     title: "Street Sweeping Enforcement",
     emoji: "🚧",
     status: "developing",
-    statusLabel: "Awaiting City Response",
-    lastUpdated: "July 7, 2026",
+    statusLabel: "Enforcement Suspended — City Notice",
+    lastUpdated: "October 23, 2026",
     summary:
-      "Tracking corrected signs, final maps, alternate-side streets, warning periods, citation timing, and whether residents receive clear notice before enforcement begins.",
+      "Warnings and citations are suspended during the transition. The CIP lists Phase I signage complete and Phase II upcoming; costs and restart notice remain questions.",
     href: "/accountability/street-sweeping/",
-    featured: true
+    featured: false
   },
   {
     slug: "fire-station-3",
@@ -41,10 +42,10 @@ export const issues: Issue[] = [
     title: "Budget & Spending Watch",
     emoji: "📊",
     status: "monitoring",
-    statusLabel: "Awaiting Clarification",
-    lastUpdated: "July 7, 2026",
+    statusLabel: "October Records Added",
+    lastUpdated: "October 23, 2026",
     summary:
-      "Tracking sewer fund reserves, public repair planning, budget amendments, contracts, grants, emergency spending, and major city funds residents should understand.",
+      "New records on Fire Station 1, Altamira, dispatch contract terms, playground grants, and traffic signals, alongside the earlier sewer questions.",
     href: "/accountability/budget-spending/"
   }
 ];

@@ -1,4 +1,5 @@
 ---
+import RecordUpdate from "../../components/RecordUpdate.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ArticleSummary from "../../components/ArticleSummary.astro";
 import ArticleMetadata from "../../components/ArticleMetadata.astro";
@@ -24,9 +25,11 @@ const description = "A living tracker for West Covina budget and spending questi
 
       <h1>Budget & Spending Watch</h1>
 
+      <RecordUpdate title="October records add funding holds and new spending questions" paragraphs={["The October 20 CIP reports Fire Station 1 replacement design on hold pending funds and Citrus/Cameron construction awaiting funding. New agenda requests include a $50,000 Altamira preliminary study and purchases for two grant-funded playground projects.", "The fire-dispatch report’s long numeric string is an account code, not a $110,502.32 budget cap. The proposed agreement also has extraordinary-cost exceptions to its ordinary annual rate limit. Vote outcomes and executed agreements still need verification.", "The sewer questions below are retained from earlier reporting. This update does not establish that the City has or has not answered them since the original entry."]} href="/city-hall/october-20-2026-agenda-report/" />
+
       <ArticleMetadata
         category="Budget / Public Spending"
-        updated="Questions submitted July 7, 2026 | Awaiting City response"
+        updated="October 23, 2026 | Original questions submitted July 7"
       />
 
       <ArticleSummary text="StayJustIn's Budget & Spending Watch tracks major West Covina funds, reserves, contracts, grants, emergency spending, assessment districts, and the plain-English questions residents should be able to ask before money moves." />

@@ -1,0 +1,25 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import OctoberCoverage from "../../components/OctoberCoverage.astro";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
+import { agendaUrl, sourcePdf } from "../../data/october2026";
+---
+<MainLayout title="October 20 West Covina Agenda: Funding, Parks & Public Safety | StayJustIn" description="Source-backed reporting on Fire Station 1, street sweeping, Altamira, Verdugo dispatch, police technology, playgrounds, traffic signals, and storm preparation." canonical="https://www.stayjustin.com/city-hall/october-20-2026-agenda-report/">
+  <section class="section"><div class="container"><article class="briefing">
+    <p class="page-kicker">City Hall / October 20 records</p>
+    <h1>What West Covina’s latest records say about funding, services, and unfinished projects</h1>
+    <ArticleMetadata category="Agenda review" published="October 23, 2026" />
+    <p>The October 20 packet documents a Fire Station 1 design hold, proposed spending on hillside evaluation and playground equipment, and a long-term fire-dispatch agreement. It also reports completed traffic-signal work and planning for Galster fire mitigation.</p>
+    <p><strong>What is verified:</strong> the contents of the staff reports and project presentation, plus the City’s current street-sweeping notice. <strong>What is not verified here:</strong> October 20 vote results, executed agreements, or subsequent payments. A recommendation in an agenda is not proof of approval.</p>
+    <h2>Three details that change the reading</h2>
+    <ul>
+      <li>The fire-dispatch fiscal paragraph contains an <strong>account number</strong>, not a $110,502.32 spending cap. Its draft also permits exceptions to the ordinary 5% annual rate-increase limit.</li>
+      <li>The signage presentation says <strong>Phase I</strong> is complete and lists <strong>Phase II</strong> as upcoming. It does not say the entire street-sweeping transition is finished.</li>
+      <li>The $223,980.25 traffic-signal budget difference is measured against the construction budget <strong>including contingency</strong>. Actual construction exceeded the original contract amount.</li>
+    </ul>
+    <p>The common thread is practical: what was budgeted, what has actually happened, what remains unfunded, and what record would answer the next question.</p>
+    <p><a href={agendaUrl}>Official agenda</a> · <a href={sourcePdf}>Selected source records (PDF, about 5 MB)</a> · <a href="/accountability/budget-spending/">Budget tracker</a></p>
+  </article></div></section>
+  <OctoberCoverage />
+</MainLayout>
+<style>.briefing { max-width: 900px; margin: auto; } .briefing li { line-height: 1.7; }</style>
