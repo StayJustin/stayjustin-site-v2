@@ -29,8 +29,57 @@ const description = "A living tracker for West Covina budget and spending questi
 
       <ArticleMetadata
         category="Budget / Public Spending"
-        updated="October 23, 2026 | Original questions submitted July 7"
+        updated="November 11, 2026 | Adopted budget analysis added"
       />
+
+      <section class="adopted-budget" aria-labelledby="adopted-budget-heading">
+        <p class="explainer-kicker">New document review · November 11, 2026</p>
+        <h2 id="adopted-budget-heading">West Covina's adopted $148.4 million budget: what residents should know</h2>
+        <p>On June 16, 2026, the City Council unanimously adopted Resolution No. 2026-44 for fiscal year July 1, 2026 through June 30, 2027. The figures below are <strong>budget estimates, not confirmed actual spending</strong>. Source: Resolution No. 2026-44, Exhibit A (pages 4–7) and Exhibit B (pages 8–12).</p>
+        <div class="budget-stats">
+          <div><span>Expected citywide revenue</span><strong>$162.04 million</strong></div>
+          <div><span>Budgeted citywide expenditures</span><strong>$148.43 million</strong></div>
+          <div><span>General Fund projected annual gain</span><strong>$107,896</strong></div>
+          <div><span>General Fund projected ending balance</span><strong>$26.07 million</strong></div>
+        </div>
+        <h3>Where the $148.43 million is budgeted</h3>
+        <p>These are accounting fund groups, not a department-by-department breakdown. Transfers are separately recorded.</p>
+        <div class="budget-bars" role="img" aria-label="Budgeted expenditures: General Fund 85.76 million dollars, special revenue 30.21 million, debt service 16.05 million, internal services 12.41 million, capital project funds 2.64 million, other funds 1.35 million.">
+          {[
+            ["General Fund", 85.76],
+            ["Special revenue", 30.21],
+            ["Debt service", 16.05],
+            ["Internal services", 12.41],
+            ["Capital project funds", 2.64],
+            ["Other funds", 1.35]
+          ].map(([name, amount]) => (
+            <div class="budget-bar-row">
+              <span>{name}</span>
+              <div class="budget-bar-track"><div class="budget-bar-fill" style={`width: ${Number(amount) / 85.76 * 100}%`}></div></div>
+              <strong>${Number(amount).toFixed(2)}M</strong>
+            </div>
+          ))}
+        </div>
+        <h3>What it means for residents</h3>
+        <ul>
+          <li><strong>A tight General Fund plan:</strong> The city expects to add only $107,896 after operating expenditures and net transfers, despite projecting a $26.07 million ending fund balance. That is a narrow annual margin, not an assertion that reserves are exhausted.</li>
+          <li><strong>Insurance obligations:</strong> General liability and workers' compensation funds project negative ending balances of about $1.63 million and $3.66 million respectively. Ask for audited balances, claims forecasts, and a funding plan.</li>
+          <li><strong>Staffing and overtime:</strong> Authorized full-time Police positions decline from 160 to 156, and Fire positions from 75 to 74. Authorized positions do not show actual vacancies or daily coverage; the city's overtime savings assumptions need payroll and vacancy data.</li>
+          <li><strong>Code enforcement:</strong> Authorized full-time Code Enforcement Officer positions increase from four to nine. Residents deserve an explanation of cost, priorities, and performance measures.</li>
+          <li><strong>Capital projects:</strong> Resolution Section 5 automatically carries forward unspent approved capital appropriations. The earlier $48.46 million project listing cannot be directly compared with the $2.64 million annual capital-project-fund expenditure category; other funds also finance capital work. A project-by-project reconciliation is still needed.</li>
+        </ul>
+        <h3>Ethics and accountability</h3>
+        <p>The budget does not itself demonstrate misconduct. The public-interest questions are whether priorities are fair, future obligations are disclosed, project spending can be traced to results, and authorized adjustments are transparent. Sections 3–4 permit specified administrative reallocations and certain grant or donation appropriations up to $60,000 per source under stated conditions.</p>
+        <h3>Questions residents should ask</h3>
+        <ol>
+          <li>How much of the projected overtime reduction has been achieved, and are response times changing?</li>
+          <li>What is the plan for negative self-insurance fund balances?</li>
+          <li>Which carried-forward capital projects are delayed, and what has actually been spent?</li>
+          <li>What services and metrics justify expanded code enforcement staffing?</li>
+          <li>Where are quarterly budget-to-actual reports and subsequent budget amendments published?</li>
+        </ol>
+        <p class="source-note"><strong>Primary record:</strong> City of West Covina, Resolution No. 2026-44, adopted June 16, 2026, Attachment No. 1, Exhibits A and B. The resolution's 12-page attachment contains summary schedules, not the complete detailed project ledger. <strong>Open verification:</strong> final detailed adopted budget, quarterly actuals, capital-project balances, and staffing vacancies.</p>
+      </section>
 
       <ArticleSummary text="StayJustIn's Budget & Spending Watch tracks major West Covina funds, reserves, contracts, grants, emergency spending, assessment districts, and the plain-English questions residents should be able to ask before money moves." />
 
@@ -142,6 +191,22 @@ const description = "A living tracker for West Covina budget and spending questi
 </MainLayout>
 
 <style>
+  .adopted-budget { margin: 2rem 0; padding: clamp(1.1rem, 3vw, 2rem); border: 1px solid #cbd5e1; border-left: 6px solid #0f766e; border-radius: 0.9rem; background: #f8fafc; color: #172033; }
+  .adopted-budget h2 { font-size: clamp(1.55rem, 3vw, 2.15rem); line-height: 1.2; }
+  .adopted-budget h3 { margin-top: 1.6rem; font-size: 1.3rem; }
+  .adopted-budget p, .adopted-budget li { font-size: 1.06rem; line-height: 1.7; }
+  .adopted-budget li { margin: .5rem 0; }
+  .budget-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; margin: 1.5rem 0; }
+  .budget-stats > div { display: flex; flex-direction: column; gap: .3rem; padding: 1rem; background: #fff; border: 1px solid #dbe4ea; border-radius: .6rem; }
+  .budget-stats span { font-size: .9rem; color: #475569; }
+  .budget-stats strong { font-size: 1.3rem; color: #0f172a; }
+  .budget-bars { display: grid; gap: .8rem; margin: 1rem 0 1.5rem; }
+  .budget-bar-row { display: grid; grid-template-columns: minmax(100px, 150px) minmax(50px, 1fr) 75px; gap: .65rem; align-items: center; font-size: .92rem; }
+  .budget-bar-row strong { text-align: right; font-variant-numeric: tabular-nums; }
+  .budget-bar-track { background: #dbe4ea; height: 15px; border-radius: 5px; overflow: hidden; }
+  .budget-bar-fill { height: 100%; background: #0f766e; border-radius: 5px; }
+  .source-note { border-top: 1px solid #cbd5e1; padding-top: 1rem; font-size: .96rem !important; }
+  @media (max-width: 480px) { .budget-bar-row { grid-template-columns: 95px minmax(35px, 1fr) 65px; gap: .4rem; font-size: .8rem; } }
   .explainer-box {
     margin: 2rem 0;
     padding: 1.5rem;
