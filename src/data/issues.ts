@@ -13,7 +13,7 @@ export interface Issue {
 }
 
 export const issues: Issue[] = [
-  { slug: "fire-station-1", title: "Fire Station 1 Replacement Funding", emoji: "🚒", status: "developing", statusLabel: "Design on Hold — City CIP", lastUpdated: "October 23, 2026", summary: "The October CIP reports a design hold pending funds. Track available funding, prior allocations, the Civic Center location, and the remaining cost.", href: "/city-hall/fire-station-1-design-funding-october-2026/", featured: true },
+  { slug: "fire-station-1", title: "Fire Station 1 Replacement Funding", emoji: "🚒", status: "developing", statusLabel: "Design on Hold — City CIP", lastUpdated: "October 23, 2026", summary: "The October CIP reports a design hold pending funds. Track available funding, prior allocations, the Civic Center location, and the remaining cost.", href: "/city-hall/fire-station-1-design-funding-october-2026/", featured: false },
   {
     slug: "street-sweeping",
     title: "Street Sweeping Enforcement",
@@ -42,11 +42,12 @@ export const issues: Issue[] = [
     title: "Budget & Spending Watch",
     emoji: "📊",
     status: "monitoring",
-    statusLabel: "October Records Added",
-    lastUpdated: "October 23, 2026",
+    statusLabel: "Adopted Budget Explained",
+    lastUpdated: "November 11, 2026",
     summary:
-      "New records on Fire Station 1, Altamira, dispatch contract terms, playground grants, and traffic signals, alongside the earlier sewer questions.",
-    href: "/accountability/budget-spending/"
+      "West Covina budgeted $148.43 million in citywide spending. See the visual breakdown, tight General Fund margin, staffing changes, insurance obligations, and questions residents should ask.",
+    href: "/accountability/budget-spending/",
+    featured: true
   }
 ];
 
