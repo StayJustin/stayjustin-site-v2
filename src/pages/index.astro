@@ -22,6 +22,25 @@ import { featuredIssue, issues } from "../data/issues";
     </div>
   </section>
 
+  <section class="section budget-front-feature" aria-labelledby="budget-front-title">
+    <div class="container">
+      <article class="budget-front-card">
+        <div class="budget-front-copy">
+          <p class="budget-front-date">UPDATED NOVEMBER 11, 2026 · BUDGET & ACCOUNTABILITY</p>
+          <h2 id="budget-front-title"><a href="/accountability/budget-spending/#adopted-budget-heading">West Covina's $148.4 Million Budget: What Residents Should Know</a></h2>
+          <p>The City Council adopted its FY 2026–27 budget in June. Our new review explains where the money is budgeted, why the General Fund's projected annual gain is just $107,896, and what staffing, insurance, and capital-project questions remain.</p>
+          <a class="budget-front-link" href="/accountability/budget-spending/#adopted-budget-heading">Read the budget breakdown and see the chart →</a>
+        </div>
+        <div class="budget-front-figures" aria-label="Budgeted citywide revenue 162.04 million dollars; expenditures 148.43 million dollars; projected General Fund annual gain 107,896 dollars">
+          <div><span>Expected revenue</span><strong>$162.04M</strong></div>
+          <div><span>Planned spending</span><strong>$148.43M</strong></div>
+          <div><span>General Fund annual gain</span><strong>$107,896</strong></div>
+          <small>Adopted projections, not actual year-end results. Source: Resolution 2026-44.</small>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <WhatToWatch />
 
   <OctoberCoverage compact />
@@ -392,3 +411,20 @@ import { featuredIssue, issues } from "../data/issues";
     </div>
   </section>
 </MainLayout>
+
+<style>
+  .budget-front-feature { padding-top: 1.5rem; padding-bottom: 1rem; }
+  .budget-front-card { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(245px, 1fr); gap: clamp(1.2rem, 3vw, 2.5rem); align-items: center; padding: clamp(1.3rem, 3vw, 2.2rem); background: #f8fafc; border: 1px solid #cbd5e1; border-left: 7px solid #0f766e; border-radius: 1rem; }
+  .budget-front-date { display: inline-block; margin: 0 0 .8rem; padding: .5rem .7rem; font-size: .92rem; font-weight: 900; letter-spacing: .045em; color: #064e3b; background: #d1fae5; border: 1px solid #0f766e; border-radius: .4rem; }
+  .budget-front-copy h2 { font-size: clamp(1.65rem, 3vw, 2.4rem); line-height: 1.18; margin: 0 0 1rem; }
+  .budget-front-copy h2 a { color: #0f172a; text-decoration: none; }
+  .budget-front-copy h2 a:hover { text-decoration: underline; }
+  .budget-front-copy > p:not(.budget-front-date) { font-size: 1.1rem; line-height: 1.7; color: #334155; }
+  .budget-front-link { display: inline-block; margin-top: .8rem; font-weight: 800; font-size: 1.05rem; color: #065f46; text-decoration: underline; text-underline-offset: 3px; }
+  .budget-front-figures { display: grid; gap: .65rem; }
+  .budget-front-figures > div { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; padding: .8rem 1rem; background: #fff; border: 1px solid #dbe4ea; border-radius: .5rem; }
+  .budget-front-figures span { font-size: .9rem; color: #475569; }
+  .budget-front-figures strong { font-size: 1.35rem; color: #0f172a; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .budget-front-figures small { color: #475569; line-height: 1.5; }
+  @media (max-width: 750px) { .budget-front-card { grid-template-columns: 1fr; } }
+</style>
