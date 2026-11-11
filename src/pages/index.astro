@@ -1,5 +1,4 @@
 ---
-import OctoberCoverage from "../components/OctoberCoverage.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import IssueCard from "../components/IssueCard.astro";
 import WhatToWatch from "../components/WhatToWatch.astro";
@@ -43,7 +42,36 @@ import { featuredIssue, issues } from "../data/issues";
 
   <WhatToWatch />
 
-  <OctoberCoverage compact />
+  <section class="section budget-coverage" aria-label="Adopted FY 2026–27 budget coverage">
+    <div class="container">
+      <div class="section-header clean-header">
+        <div>
+          <p class="page-kicker budget-coverage-date">UPDATED NOVEMBER 11, 2026</p>
+          <h2 class="section-title">West Covina's Adopted Budget: Where the Money Goes</h2>
+          <p class="section-sub">The City Council approved a $148.43 million spending plan. Here are the implications for services, staffing, and public accountability.</p>
+        </div>
+        <a class="view-all" href="/accountability/budget-spending/#adopted-budget-heading">Read the full budget analysis →</a>
+      </div>
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="story-tag">General Fund</span>
+          <h3><a href="/accountability/budget-spending/#adopted-budget-heading">Why a $107,896 annual gain matters</a></h3>
+          <p>The city projects a $26.07 million General Fund ending balance, but only a $107,896 increase after planned spending and net transfers. The annual margin is narrow, not proof the city has run out of reserves.</p>
+        </article>
+        <article class="story-card">
+          <span class="story-tag">Public Safety & Staffing</span>
+          <h3><a href="/accountability/budget-spending/#adopted-budget-heading">Staffing changes and overtime assumptions</a></h3>
+          <p>Authorized full-time Police and Fire positions decrease while Code Enforcement Officer positions increase. Actual vacancies, service levels, and overtime savings still need verification.</p>
+        </article>
+        <article class="story-card">
+          <span class="story-tag">Financial Oversight</span>
+          <h3><a href="/accountability/budget-spending/#adopted-budget-heading">Insurance obligations and unfinished projects</a></h3>
+          <p>Projected negative insurance fund balances and capital appropriations carried over from earlier years raise questions about future costs, project progress, and transparent reporting.</p>
+        </article>
+      </div>
+      <p class="budget-coverage-note">Source: Adopted Resolution No. 2026-44, Exhibits A and B. Figures are budget projections, not audited spending results. <a href="/city-hall/october-20-2026-agenda-report/">Previous October 20 coverage remains available.</a></p>
+    </div>
+  </section>
 
   <section class="featured-section">
     <div class="container">
@@ -429,3 +457,9 @@ import { featuredIssue, issues } from "../data/issues";
   @media (max-width: 750px) { .budget-front-card { grid-template-columns: 1fr; } }
 </style>
 
+
+<style>
+  .budget-coverage-date { display: inline-block; padding: .4rem .65rem; background: #d1fae5; color: #064e3b; border: 1px solid #0f766e; border-radius: .4rem; font-weight: 900; font-size: .94rem; letter-spacing: .03em; }
+  .budget-coverage-note { margin-top: 1.1rem; color: #475569; font-size: .94rem; line-height: 1.6; }
+  .budget-coverage-note a { font-weight: 700; }
+</style>
