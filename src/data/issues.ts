@@ -20,7 +20,7 @@ export const issues: Issue[] = [
     emoji: "🚧",
     status: "developing",
     statusLabel: "Enforcement Suspended — City Notice",
-    lastUpdated: "October 23, 2026",
+    lastUpdated: "November 11, 2026",
     summary:
       "Warnings and citations are suspended during the transition. The CIP lists Phase I signage complete and Phase II upcoming; costs and restart notice remain questions.",
     href: "/accountability/street-sweeping/",
@@ -31,11 +31,12 @@ export const issues: Issue[] = [
     title: "Fire Station 3 Emergency Repairs",
     emoji: "🚒",
     status: "developing",
-    statusLabel: "Awaiting Cost and Scope Update",
-    lastUpdated: "July 7, 2026",
+    statusLabel: "Closure Proposed — Vote to Verify",
+    lastUpdated: "November 11, 2026",
     summary:
-      "Tracking emergency repair authority, total approved cost, amount spent to date, remaining work, temporary firefighter arrangements, and what condition ends the emergency action.",
-    href: "/accountability/fire-station-3/"
+      "August 18 staff recommended ending the emergency action and accepting specified remediation work for $130,720.85. Council action and the completion filing still require confirmation.",
+    href: "/accountability/fire-station-3/",
+    featured: true
   },
   {
     slug: "budget-spending",
@@ -47,7 +48,7 @@ export const issues: Issue[] = [
     summary:
       "West Covina budgeted $148.43 million in citywide spending. See the visual breakdown, tight General Fund margin, staffing changes, insurance obligations, and questions residents should ask.",
     href: "/accountability/budget-spending/",
-    featured: true
+    featured: false
   }
 ];
 
