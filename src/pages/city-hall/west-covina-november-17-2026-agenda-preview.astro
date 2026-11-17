@@ -2,7 +2,13 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 <MainLayout title="Read Before Tonight's West Covina City Council Meeting | StayJustIn" description="West Covina's November 17 City Council agenda: first-quarter finances, Fire Department overtime, Kimley-Horn's engineering contract, and police drone reporting." canonical="https://www.stayjustin.com/city-hall/west-covina-november-17-2026-agenda-preview/">
-  <article class="article-page"><div class="container verbatim-story">
+  <article class="article-page"><div class="container article-container verbatim-story">
+    <header class="story-header">
+      <p class="page-kicker">CITY HALL · COUNCIL AGENDA · NOVEMBER 17, 2026</p>
+      <h1>Read Before Tonight's City Council Meeting: Fire Overtime, a $5.3M Traffic Project, and Contract Questions</h1>
+      <p class="article-dek">A closer look at West Covina's first-quarter finances, overtime spending, traffic improvements, and engineering contract oversight before the November 17 meeting.</p>
+      <p class="story-byline">By StayJustIn · November 17, 2026</p>
+    </header>
     <div class="story-content">
 <p>🚨 WEST COVINA: Before tonight's City Council meeting, there are a few things in the City's reports I think residents should know about.</p>
 <p>Nearly $22 million more spent than collected in the first quarter. A Fire Department that's already used about 95% of its annual overtime budget. And a $5.3 million traffic project involving a company that's already working on several other City projects.</p>
@@ -88,6 +94,10 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </div></article>
   <style>
     .verbatim-story{max-width:850px;padding-top:clamp(1.5rem,4vw,3rem);padding-bottom:4rem}
+    .story-header{margin-bottom:2.25rem;padding-bottom:1.5rem;border-bottom:1px solid #cbd5e1}
+    .story-header h1{font-size:clamp(2rem,1.65rem + 1.5vw,3rem);line-height:1.18;margin:.8rem 0 1rem}
+    .story-header .article-dek{font-size:clamp(1.15rem,1.05rem + .4vw,1.35rem);line-height:1.6}
+    .story-byline{font-size:1rem;color:var(--muted,#52616b);margin-top:1rem}
     .story-content p{font-size:clamp(1.15rem,1.05rem + .4vw,1.35rem);line-height:1.85;margin:0 0 1.35rem;overflow-wrap:break-word}
     .story-content h2{font-size:clamp(1.35rem,1.2rem + .55vw,1.7rem);line-height:1.35;margin:2.7rem 0 1.2rem;font-weight:800;overflow-wrap:break-word}
     .data-chart{margin:2rem 0 2.5rem;padding:clamp(1rem,3vw,1.6rem);border:1px solid #b9cbd0;border-radius:14px;background:#f5f9fa;color:#17313a}
