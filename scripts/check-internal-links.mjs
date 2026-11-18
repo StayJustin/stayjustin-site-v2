@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const pagesDir = path.join(root, "src", "pages");
+const publicDir = path.join(root, "public");
 const scanDirs = [path.join(root, "src")];
 
 const ignoredPrefixes = [
@@ -100,7 +101,10 @@ for (const file of sourceFiles) {
     const route = normalizeRoute(rawHref);
     if (!route) continue;
 
-    if (!routeMatchesAvailableRoute(route, availableRoutes)) {
+    const assetPath = path.join(publicDir, decodeURIComponent(rawHref.split("?")[0].split("#")[0]).replace(/^\/+/, ""));
+    const isPublicAsset = fs.existsSync(assetPath) && fs.statSync(assetPath).isFile();
+
+    if (!isPublicAsset && !routeMatchesAvailableRoute(route, availableRoutes)) {
       missingLinks.push({ file: relativeFile, href: rawHref, route });
     }
   }
